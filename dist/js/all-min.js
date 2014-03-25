@@ -1,0 +1,1 @@
+{"version":3,"file":"all.js.map","sources":["all-min.js"],"names":["test","console","log"],"mappings":"AAAA,QAASA,QACLC,QAAQC,IAAI,eAEhB,QAASF,QACLC,QAAQC,IAAI"}
