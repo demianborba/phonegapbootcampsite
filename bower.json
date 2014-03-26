@@ -1,0 +1,9 @@
+{
+  "name": "phonegapbootcampsite",
+  "version": "0.0.1",
+  "homepage": "https://github.com/demianborba/phonegapbootcampsite",
+  "authors": [
+    "Demian Borba <demian.borba@actioncreations.com>"
+  ],
+  "license": "MIT"
+}
