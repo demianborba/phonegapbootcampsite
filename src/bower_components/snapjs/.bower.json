@@ -23,6 +23,5 @@
   },
   "_source": "git://github.com/jakiestfu/Snap.js.git",
   "_target": "*",
-  "_originalSource": "snapjs",
-  "_direct": true
+  "_originalSource": "snapjs"
 }

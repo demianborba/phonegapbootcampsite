@@ -3,6 +3,8 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     stylish = require('jshint-stylish'),
     rename = require('gulp-rename'),
+    minifyCSS = require('gulp-minify-css'),
+    notify = require('gulp-notify'),
     concat = require('gulp-concat');
 
 gulp.task('lint', function () {
@@ -13,33 +15,61 @@ gulp.task('lint', function () {
 
 });
 
-gulp.task('scripts', function () {
-    
-    // load only necessary files to dist
-    gulp.src('src/bower_components/snapjs/snap.min.js')
-        .pipe(gulp.dest('dist/bower_components/snapjs/'))
-    gulp.src('src/bower_components/snapjs/snap.css')
-        .pipe(gulp.dest('dist/bower_components/snapjs/'))
-    
-    // load assets
+gulp.task('css', function () {
+
+    // minify and load CSS to dist
+    gulp.src('src/css/*.css')
+        .pipe(minifyCSS())
+        .pipe(gulp.dest('dist/css/'))
+        .pipe(notify("css files minifed and sent to /dist"));
+
+});
+
+gulp.task('html', function () {
+
+    gulp.src('src/*.html')
+        .pipe(gulp.dest('dist/'));
+
+});
+
+gulp.task('assets', function () {
+
     gulp.src('src/assets/*')
-        .pipe(gulp.dest('dist/assets/'))
-    
-    // uglify and load JS
+        .pipe(gulp.dest('dist/assets/'));
+
+});
+
+gulp.task('3rdpartyjsfiles', function () {
+
+    gulp.src('src/bower_components/snapjs/snap.min.js')
+        .pipe(gulp.dest('dist/bower_components/snapjs/'));
+
+    gulp.src('src/bower_components/snapjs/snap.css')
+        .pipe(gulp.dest('dist/bower_components/snapjs/'));
+
+});
+
+gulp.task('scripts', function () {
+
     gulp.src('src/js/*.js')
         .pipe(uglify({
             outSourceMap: true
         }))
         .pipe(gulp.dest('dist/js/'))
-    
-    // load CSS
-    gulp.src('src/css/*.css')
-        .pipe(gulp.dest('dist/css/'))
-    
-    // uglify and load all html files to dist
-    gulp.src('src/*.html')
-        .pipe(gulp.dest('dist/'))
+        .pipe(notify("js files minifed and sent to /dist"));
 
 });
 
-gulp.task('default', ['lint', 'scripts']);
+gulp.task('default', function () {
+
+    gulp.run('lint', 'css', 'html', 'assets', '3rdpartyjsfiles', 'scripts');
+
+    gulp.watch('src/css/*.css', function () {
+        gulp.run('css');
+    });
+
+    gulp.watch('src/js/*.js', function () {
+        gulp.run('lint', 'scripts');
+    });
+
+});

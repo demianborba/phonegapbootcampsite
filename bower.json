@@ -5,5 +5,8 @@
   "authors": [
     "Demian Borba <demian.borba@actioncreations.com>"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "snapjs": "*"
+  }
 }
