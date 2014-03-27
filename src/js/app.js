@@ -1,5 +1,17 @@
 window.onload = function () {
+    
+    // position list in drawer-left to be displayed in the middle vertically
     adjustListMenuLeftPaddingTop();
+    
+    // initialize snapjs
+    var snapper = new Snap({
+        element: document.getElementById('content'),
+        disable: 'right'
+    });
+    
+    // initialize fastclick
+    FastClick.attach(document.body);
+
 };
 
 window.addEventListener("orientationchange", function () {
@@ -18,6 +30,6 @@ var addEvent = function addEvent(element, eventName, func) {
     }
 };
 
-addEvent(document.getElementById('open-left'), 'click', function () {
+addEvent(document.getElementById('open-left-button'), 'click', function () {
     snapper.open('left');
 });

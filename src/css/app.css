@@ -1,107 +1,118 @@
+/*handle selection on touch*/
+
 html,
 body {
     -webkit-touch-callout: none;
     -webkit-text-size-adjust: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    /* FOR ANDROID */
+    /* for android */
     -webkit-tap-highlight-color: transparent;
     user-select: none;
     webkit-user-select: none;
-    overflow: hidden;
-    height: 100%
 }
+
 input,
 textarea {
     user-select: text
 }
+
+/* fonts faces */
+
 @font-face {
     font-family: 'Roboto Light';
-    src: url('../fonts/Roboto/Roboto-Light.ttf');
+    src: url('../fonts/Roboto/Roboto-Light.ttf')
 }
-@font-face{font-family:'Glyphicons Halflings';src:url(../fonts/Glyph/glyphicons-halflings-regular.eot);src:url(../fonts/Glyph/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../fonts/Glyph/glyphicons-halflings-regular.woff) format('woff'),url(../fonts/Glyph/glyphicons-halflings-regular.ttf) format('truetype'),url(../fonts/Glyph/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}
+
+@font-face {
+    font-family:'Glyphicons Halflings';
+    src:url(../fonts/Glyph/glyphicons-halflings-regular.eot);
+    src:url(../fonts/Glyph/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/Glyph/glyphicons-halflings-regular.woff) format('woff'),
+    url(../fonts/Glyph/glyphicons-halflings-regular.ttf) format('truetype'),
+    url(../fonts/Glyph/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')
+}
+
+/* main content area */
+
 #content {
-    background: #d1d1d1 url(../images/drag.png) center 75% no-repeat
+    background: #d1d1d1
 }
+
+/*toolbar inside content area*/
+
 #toolbar {
-    background: black;
-    border-bottom: 1px solid #111b32;
     position: absolute;
+    background-color: #6d209d;
     bottom: 0;
     right: 0;
     left: 0;
     width: auto;
-    height: 44px;
+    height: 50px;
     position: fixed
 }
+
 #toolbar h1 {
     font-family: 'Roboto Light';
-    color: #fff;
     font-size: 16px;
-    line-height: 22px;
+    color: white;
+    margin: 0;
     text-align: center;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
+    padding-top: 14px
+}
+
+/*glyph icons*/
+
+.glyphicon {
     position: absolute;
-    top: 0;
-    right: 44px;
-    left: 44px;
-    width: auto;
-    height: 44px
+    font-family: 'Glyphicons Halflings';
+    line-height: 1;
+    font-size: 20px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    padding-top: 15px;
+/*    background-color: cyan;*/
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
 }
-#open-left {
-    background: url(../images/open.png) center center no-repeat;
-    display: block;
-    width: 44px;
-    height: 44px
-}
+
+/*overwrite snapjs snap.css*/
+
 .snap-content {
+    overflow-x: hidden;
+    overflow-y: auto;
     background: #d8d8d8
 }
 .snap-drawers {
-    background: black
+    background: #6d209d
 }
 .snap-drawer-left {
-    background: black;
+    background-color: #6d209d;
     font-family: 'Roboto Light';
-    font-size: 14px;
-    color: #fff
-}
-.snap-drawer-left h1 {
-    font-size: 14px;
-    padding: 15px;
-    text-indent: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-bottom: 0
 }
 .snap-drawer-left ul {
     padding: 0;
     margin: 0;
     list-style-type: none
 }
+.snap-drawer-left li p {
+    font-size: 15px;
+    color: white;
+    margin: 0;
+    text-indent: 45px;
+    padding: 15px
+}
 .snap-drawer-left li > a {
     display: block;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 15px;
+    height: 50px;
+    text-indent: 15px;
     text-decoration: none;
-    color: #ccc;
-    text-indent: 25px
 }
-.snap-drawer-left p {
-    opacity: 0.5;
-    padding: 15px;
-    font-size: 12px
-}
-.glyphicon {
-    position: relative;
-    top: 4px;
-    right: 15px;
-    font-family: 'Glyphicons Halflings';
-    font-style: normal;
-    font-weight: 50;
-    line-height: 1;
-    font-size: 20px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
+
+/*glyphicon contents*/
+.glyphicon-open-left:before {
+    content: "\e055";
 }
 .glyphicon-select:before {
     content: "\e055"
