@@ -1,17 +1,20 @@
 window.onload = function () {
-    
-    // position list in drawer-left to be displayed in the middle vertically
+
+    //position list in drawer-left to be displayed in the middle vertically
     adjustListMenuLeftPaddingTop();
-    
+
     // initialize snapjs
     var snapper = new Snap({
         element: document.getElementById('content'),
         disable: 'right'
     });
-    
-    // initialize fastclick
+
+    // initialize fast click
     FastClick.attach(document.body);
 
+    addEvent(document.getElementById('open-left-button'), 'click', function () {
+        snapper.open('left');
+    });
 };
 
 window.addEventListener("orientationchange", function () {
@@ -29,7 +32,3 @@ var addEvent = function addEvent(element, eventName, func) {
         return element.attachEvent("on" + eventName, func);
     }
 };
-
-addEvent(document.getElementById('open-left-button'), 'click', function () {
-    snapper.open('left');
-});

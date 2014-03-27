@@ -7,6 +7,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "snapjs": "*"
+    "snapjs": "*",
+    "fastclick": "~1.0.0"
   }
 }

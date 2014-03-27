@@ -8,18 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="bower_components/snapjs/snap.css" />
     <link rel="stylesheet" type="text/css" href="css/app.css" />
     <script type="text/javascript" src="bower_components/snapjs/snap.js"></script>
-    <script type="text/javascript" src="bower_components/fastclick/fastclick.js"></script>
+    <script type="text/javascript" src="bower_components/fastclick/lib/fastclick.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 </head>
 
 <body>
     <div class="snap-drawers">
-        <div class="snap-drawer snap-drawer-left" id="list-menu-left">
+        <div class="snap-drawer snap-drawer-left">
             <div>
-                <ul>
+                <ul id="list-menu-left">
                     <li>
                         <a href="#">
                             <span class="glyphicon glyphicon-about"></span>
@@ -96,7 +97,7 @@
             </div>
         </div>
     </div>
-    
+    <div class="snap-drawer snap-drawer-right"></div>
     <div id="content" class="snap-content">
         <div id="toolbar">
             <a href="#" id="open-left-button">

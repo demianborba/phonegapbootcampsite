@@ -62,7 +62,7 @@ gulp.task('bower_components', function () {
         .pipe(uglify({
             outSourceMap: true
         }))
-        .pipe(gulp.dest('dist/bower_components/fastclick/'));
+        .pipe(gulp.dest('dist/bower_components/fastclick/lib/'));
     
 });
 
