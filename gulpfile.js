@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     stylish = require('jshint-stylish'),
     rename = require('gulp-rename'),
+    sass = require('gulp-sass'),
     minifyCSS = require('gulp-minify-css'),
     notify = require('gulp-notify'),
     concat = require('gulp-concat');
@@ -13,6 +14,14 @@ gulp.task('lint', function () {
         .pipe(jshint())
         .pipe(jshint.reporter('jshint-stylish'));
 
+});
+
+gulp.task('sass', function () {
+    // create css using sass and place in the css directory
+    gulp.src('src/scss/*.scss')
+        .pipe(sass())
+        .pipe(gulp.dest('src/css/'))
+        .pipe(notify("sass finished and css placed in /src/css"));
 });
 
 gulp.task('css', function () {
@@ -79,8 +88,12 @@ gulp.task('scripts', function () {
 
 gulp.task('default', function () {
 
-    gulp.run('lint', 'css', 'html', 'images', 'fonts', 'bower_components', 'scripts');
+    gulp.run('lint', 'sass', 'css', 'html', 'images', 'fonts', 'bower_components', 'scripts');
 
+    gulp.watch('src/scss/*.scss', function () {
+        gulp.run('sass');
+    });
+    
     gulp.watch('src/css/*.css', function () {
         gulp.run('css');
     });
