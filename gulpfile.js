@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     minifyCSS = require('gulp-minify-css'),
     notify = require('gulp-notify'),
+    express = require('express'),
     concat = require('gulp-concat');
 
 gulp.task('lint', function () {
@@ -66,13 +67,13 @@ gulp.task('bower_components', function () {
     gulp.src('src/bower_components/snapjs/snap.css')
         .pipe(minifyCSS())
         .pipe(gulp.dest('dist/bower_components/snapjs/'));
-    
+
     gulp.src('src/bower_components/fastclick/lib/fastclick.js')
         .pipe(uglify({
             outSourceMap: true
         }))
         .pipe(gulp.dest('dist/bower_components/fastclick/lib/'));
-    
+
 });
 
 gulp.task('scripts', function () {
@@ -86,14 +87,27 @@ gulp.task('scripts', function () {
 
 });
 
+gulp.task('localserver', function () {
+   
+    var app = express();
+    app.configure(function () {
+        app.use(
+            "/",
+            express.static(__dirname + "/dist/")
+        );
+    });
+    app.listen(3000);
+
+});
+
 gulp.task('default', function () {
 
-    gulp.run('lint', 'sass', 'css', 'html', 'images', 'fonts', 'bower_components', 'scripts');
+    gulp.run('lint', 'sass', 'css', 'html', 'images', 'fonts', 'bower_components', 'scripts', 'localserver');
 
     gulp.watch('src/scss/*.scss', function () {
         gulp.run('sass');
     });
-    
+
     gulp.watch('src/css/*.css', function () {
         gulp.run('css');
     });
