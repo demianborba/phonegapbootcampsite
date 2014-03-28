@@ -25,7 +25,7 @@ input, textarea {
 
 #toolbar {
   position: absolute;
-  background-color: #288ac7;
+  background-color: #bc19e3;
   bottom: 0;
   right: 0;
   left: 0;
@@ -63,10 +63,10 @@ input, textarea {
   background: #d8d8d8; }
 
 .snap-drawers {
-  background: #288ac7; }
+  background: #bc19e3; }
 
 .snap-drawer-left {
-  background-color: #288ac7;
+  background-color: #bc19e3;
   font-family: 'Roboto Light'; }
 
 .snap-drawer-left ul {

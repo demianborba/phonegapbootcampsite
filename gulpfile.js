@@ -6,7 +6,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     minifyCSS = require('gulp-minify-css'),
     notify = require('gulp-notify'),
-    express = require('express'),
+    browserSync = require('browser-sync'),
     concat = require('gulp-concat');
 
 gulp.task('lint', function () {
@@ -87,22 +87,16 @@ gulp.task('scripts', function () {
 
 });
 
-gulp.task('localserver', function () {
-   
-    var app = express();
-    app.configure(function () {
-        app.use(
-            "/",
-            express.static(__dirname + "/dist/")
-        );
-    });
-    app.listen(3000);
-
+gulp.task('browser-sync', function () {
+    browserSync.init(['dist/**'], {
+    server: {
+        baseDir: 'dist'
+    }});
 });
 
 gulp.task('default', function () {
 
-    gulp.run('lint', 'sass', 'css', 'html', 'images', 'fonts', 'bower_components', 'scripts', 'localserver');
+    gulp.run('lint', 'sass', 'css', 'html', 'images', 'fonts', 'bower_components', 'scripts', 'browser-sync');
 
     gulp.watch('src/scss/*.scss', function () {
         gulp.run('sass');
