@@ -1,5 +1,9 @@
 // sass variables 
-$main-app-color:#bc19e3;
+$main-app-color:#288ac7;
+$main-font-name:'Roboto Light';
+$main-font-location: '../fonts/Roboto/Roboto-Light.ttf';
+$font-icons-name: 'Glyphicons Halflings';
+$font-icons-location: '../fonts/Glyph/glyphicons-halflings-regular';
 
 // handle selection on touch
 
@@ -23,17 +27,17 @@ textarea {
 // fonts faces
 
 @font-face {
-    font-family: 'Roboto Light';
-    src: url('../fonts/Roboto/Roboto-Light.ttf')
+    font-family: $main-font-name;
+    src: url($main-font-location)
 }
 
 @font-face {
-    font-family:'Glyphicons Halflings';
-    src:url(../fonts/Glyph/glyphicons-halflings-regular.eot);
-    src:url(../fonts/Glyph/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),
-    url(../fonts/Glyph/glyphicons-halflings-regular.woff) format('woff'),
-    url(../fonts/Glyph/glyphicons-halflings-regular.ttf) format('truetype'),
-    url(../fonts/Glyph/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')
+    font-family: $font-icons-name;
+    src:url(#{$font-icons-location}.eot);
+    src:url(#{$font-icons-location}.eot?#iefix) format('embedded-opentype'),
+    url(#{$font-icons-location}.woff) format('woff'),
+    url(#{$font-icons-location}.ttf) format('truetype'),
+    url(#{$font-icons-location}.svg#glyphicons_halflingsregular) format('svg')
 }
 
 // main content area
@@ -56,7 +60,7 @@ textarea {
 }
 
 #toolbar h1 {
-    font-family: 'Roboto Light';
+    font-family: $main-font-name;
     font-size: 15px;
     color: white;
     margin: 0;
@@ -70,7 +74,7 @@ textarea {
 
 .glyphicon {
     position: absolute;
-    font-family: 'Glyphicons Halflings';
+    font-family: $font-icons-name;
     line-height: 1;
     font-size: 20px;
     color: white;
@@ -95,7 +99,7 @@ textarea {
 }
 .snap-drawer-left {
     background-color: $main-app-color;
-    font-family: 'Roboto Light';
+    font-family: $main-font-name;
 }
 .snap-drawer-left ul {
     padding: 0;
