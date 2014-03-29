@@ -8,6 +8,8 @@
   "license": "MIT",
   "dependencies": {
     "snapjs": "*",
-    "fastclick": "~1.0.0"
-  }
+    "fastclick": "~1.0.0",
+    "angular": "~1.2.15"
+  },
+  "devDependencies": {}
 }

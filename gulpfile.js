@@ -73,6 +73,9 @@ gulp.task('bower_components', function () {
             outSourceMap: true
         }))
         .pipe(gulp.dest('dist/bower_components/fastclick/lib/'));
+    
+    gulp.src('src/bower_components/angular/angular.min.js')
+        .pipe(gulp.dest('dist/bower_components/angular/'));
 
 });
 
