@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en-US">
+<html>
 
 <head>
     <title>PhoneGap Bootcamp</title>
@@ -10,103 +10,40 @@
     <meta name="apple-touch-fullscreen" content="yes">
     <link rel="stylesheet" type="text/css" href="bower_components/snapjs/snap.css" />
     <link rel="stylesheet" type="text/css" href="css/app.css" />
-    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-    <script type="text/javascript" src="bower_components/snapjs/snap.js"></script>
-    <script type="text/javascript" src="bower_components/fastclick/lib/fastclick.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
 </head>
 
 <body>
-    <div class="snap-drawers">
-        <div class="snap-drawer snap-drawer-left">
-            <div>
-                <ul id="list-menu-left">
-                    <li>
-                        <a href="#">
-                            <span class="glyphicon glyphicon-about"></span>
-                            <p>Sobre o Bootcamp</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="glyphicon glyphicon-quotes"></span>
-                            <p>Depoimentos</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="glyphicon glyphicon-instructors"></span>
-                            <p>Instrutores</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="glyphicon glyphicon-agenda"></span>
-                            <p>Agenda</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="glyphicon glyphicon-duration"></span>
-                            <p>Duração</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="glyphicon glyphicon-registration"></span>
-                            <p>Inscrições</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="glyphicon glyphicon-prerequisits"></span>
-                            <p>Pré-requisitos</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="glyphicon glyphicon-target"></span>
-                            <p>Público Alvo</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="glyphicon glyphicon-dateslocations"></span>
-                            <p>Datas e Locais</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="glyphicon glyphicon-videos"></span>
-                            <p>Vídeos</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="glyphicon glyphicon-photos"></span>
-                            <p>Fotos</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="glyphicon glyphicon-talktous"></span>
-                            <p>Fale com a organização</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="snap-drawer snap-drawer-right"></div>
-    <div id="content" class="snap-content">
-        <div id="toolbar">
-            <a href="#" id="open-left-button">
-                <span class="glyphicon glyphicon-open-left"></span>
-            </a>
-            <h1>PhoneGap Bootcamp</h1>
-        </div>
-    </div>
+    <div ng-app="app">
+        <div ng-controller="AppController">
 
+            <div class="snap-drawers">
+                <div class="snap-drawer snap-drawer-left">
+                    <ul id="list-menu-left" ng-controller="MainMenuController">
+                        <li ng-repeat="item in mainMenuPortuguese.items">
+                            <a>
+                                <span class="glyphicon {{item.icon}}"></span>
+                                <p>{{item.label}}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="snap-drawer snap-drawer-right"></div>
+            <div id="content" class="snap-content">
+                <div id="toolbar">
+                    <a href="#" id="open-left-button">
+                        <span class="glyphicon glyphicon-open-left"></span>
+                    </a>
+                    <h1>PhoneGap Bootcamp</h1>
+                </div>
+            </div>
+
+            <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+            <script type="text/javascript" src="bower_components/snapjs/snap.js"></script>
+            <script type="text/javascript" src="bower_components/fastclick/lib/fastclick.js"></script>
+            <script type="text/javascript" src="js/app.js"></script>
+        </div>
+    </div>
 </body>
 
 </html>

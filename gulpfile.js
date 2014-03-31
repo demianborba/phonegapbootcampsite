@@ -21,18 +21,9 @@ gulp.task('sass', function () {
     // create css using sass and place in the css directory
     gulp.src('src/scss/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('src/css/'))
-        .pipe(notify("sass finished and css placed in /src/css"));
-});
-
-gulp.task('css', function () {
-
-    // minify and load CSS to dist
-    gulp.src('src/css/*.css')
         .pipe(minifyCSS())
         .pipe(gulp.dest('dist/css/'))
-        .pipe(notify("css files minifed and sent to /dist"));
-
+        .pipe(notify("sass finished and css created in /dist/css"));
 });
 
 gulp.task('html', function () {
@@ -44,7 +35,7 @@ gulp.task('html', function () {
 
 gulp.task('images', function () {
 
-    gulp.src('src/images/**g')
+    gulp.src('src/images/**')
         .pipe(gulp.dest('dist/images/'));
 
 });
@@ -60,7 +51,7 @@ gulp.task('bower_components', function () {
 
     gulp.src('src/bower_components/snapjs/snap.js')
         .pipe(uglify({
-            outSourceMap: true
+            mangle: false
         }))
         .pipe(gulp.dest('dist/bower_components/snapjs/'));
 
@@ -70,7 +61,7 @@ gulp.task('bower_components', function () {
 
     gulp.src('src/bower_components/fastclick/lib/fastclick.js')
         .pipe(uglify({
-            outSourceMap: true
+            mangle: false
         }))
         .pipe(gulp.dest('dist/bower_components/fastclick/lib/'));
     
@@ -83,7 +74,7 @@ gulp.task('scripts', function () {
 
     gulp.src('src/js/*.js')
         .pipe(uglify({
-            outSourceMap: true
+            mangle: false
         }))
         .pipe(gulp.dest('dist/js/'))
         .pipe(notify("js files minifed and sent to /dist"));
@@ -99,14 +90,10 @@ gulp.task('browser-sync', function () {
 
 gulp.task('default', function () {
 
-    gulp.run('lint', 'sass', 'css', 'html', 'images', 'fonts', 'bower_components', 'scripts', 'browser-sync');
+    gulp.run('lint', 'sass', 'html', 'images', 'fonts', 'bower_components', 'scripts', 'browser-sync');
 
     gulp.watch('src/scss/*.scss', function () {
         gulp.run('sass');
-    });
-
-    gulp.watch('src/css/*.css', function () {
-        gulp.run('css');
     });
 
     gulp.watch('src/js/*.js', function () {
