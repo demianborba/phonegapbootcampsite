@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-    uglify = require('gulp-uglify'),
     jshint = require('gulp-jshint'),
     stylish = require('jshint-stylish'),
     rename = require('gulp-rename'),
@@ -33,6 +32,13 @@ gulp.task('html', function () {
 
 });
 
+gulp.task('partials', function () {
+
+    gulp.src('src/partials/**')
+        .pipe(gulp.dest('dist/partials/'));
+
+});
+
 gulp.task('images', function () {
 
     gulp.src('src/images/**')
@@ -50,9 +56,6 @@ gulp.task('fonts', function () {
 gulp.task('bower_components', function () {
 
     gulp.src('src/bower_components/snapjs/snap.js')
-        .pipe(uglify({
-            mangle: false
-        }))
         .pipe(gulp.dest('dist/bower_components/snapjs/'));
 
     gulp.src('src/bower_components/snapjs/snap.css')
@@ -60,9 +63,6 @@ gulp.task('bower_components', function () {
         .pipe(gulp.dest('dist/bower_components/snapjs/'));
 
     gulp.src('src/bower_components/fastclick/lib/fastclick.js')
-        .pipe(uglify({
-            mangle: false
-        }))
         .pipe(gulp.dest('dist/bower_components/fastclick/lib/'));
     
     gulp.src('src/bower_components/angular/angular.min.js')
@@ -72,12 +72,9 @@ gulp.task('bower_components', function () {
 
 gulp.task('scripts', function () {
 
-    gulp.src('src/js/*.js')
-        .pipe(uglify({
-            mangle: false
-        }))
+    gulp.src('src/js/**')
         .pipe(gulp.dest('dist/js/'))
-        .pipe(notify("js files minifed and sent to /dist"));
+        .pipe(notify("js files sent to /dist"));
 
 });
 
@@ -90,18 +87,23 @@ gulp.task('browser-sync', function () {
 
 gulp.task('default', function () {
 
-    gulp.run('lint', 'sass', 'html', 'images', 'fonts', 'bower_components', 'scripts', 'browser-sync');
+    gulp.run('lint', 'sass', 'html', 'partials','images', 'fonts', 'bower_components', 'scripts');
+    // gulp.run('lint', 'sass', 'html', 'partials','images', 'fonts', 'bower_components', 'scripts', 'browser-sync');
 
     gulp.watch('src/scss/*.scss', function () {
         gulp.run('sass');
     });
 
-    gulp.watch('src/js/*.js', function () {
+    gulp.watch('src/js/**', function () {
         gulp.run('lint', 'scripts');
     });
 
     gulp.watch('src/*.html', function () {
         gulp.run('html');
+    });
+    
+    gulp.watch('src/partials/**', function () {
+        gulp.run('partials');
     });
 
 });
