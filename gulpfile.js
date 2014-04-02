@@ -87,8 +87,8 @@ gulp.task('browser-sync', function () {
 
 gulp.task('default', function () {
 
+    //gulp.run('lint', 'sass', 'html', 'partials','images', 'fonts', 'bower_components', 'scripts', 'browser-sync');
     gulp.run('lint', 'sass', 'html', 'partials','images', 'fonts', 'bower_components', 'scripts');
-    // gulp.run('lint', 'sass', 'html', 'partials','images', 'fonts', 'bower_components', 'scripts', 'browser-sync');
 
     gulp.watch('src/scss/*.scss', function () {
         gulp.run('sass');

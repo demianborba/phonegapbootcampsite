@@ -8,37 +8,28 @@ app.controller('AppController', ['$scope',
         $scope.isPortuguese = true;
         $scope.isEnglish = false;
         
-        // defining snap
+        // defining the transition speed for snapper
+        $scope.snapperTransitionSpeed = 0.2;
+        
+        // defining snapper
         $scope.snapper = new Snap({
             element: document.getElementById('content'),
-            disable: 'right'
+            disable: 'right',
+            transitionSpeed: $scope.snapperTransitionSpeed
         });
         
-        // tabButton functionality
-        $scope.tabButton = document.getElementById('open-left-button');
-        $scope.tabButton.addEventListener('click', function () {
+        // tabButton functionality of snapper
+        $scope.openSnapper = function () {
             if ($scope.snapper.state().state === 'closed') {
                 $scope.snapper.open('left');
             }
-        }, false);
-        
-        // route, load partial and then close snapper
-        $scope.$on('$routeChangeSuccess', function (event, routeData) {
-            if ($scope.snapper.state().state === 'left') {
-                $scope.snapper.close();
-                
-            }
-        });
+        };
 }]);
 
 // configuring all routes
 app.config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider.
-        when('/', {
-            templateUrl: 'partials/about.html',
-            controller: 'AboutController'
-        }).
         when('/about', {
             templateUrl: 'partials/about.html',
             controller: 'AboutController'
