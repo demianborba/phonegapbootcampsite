@@ -1,4 +1,4 @@
 app.controller('TargetController', ['$scope',
-    function ($scope) {
+    function (scope) {
         
 }]);

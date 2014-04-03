@@ -1,4 +1,4 @@
 app.controller('RegistrationController', ['$scope',
-    function ($scope) {
+    function (scope) {
         
 }]);

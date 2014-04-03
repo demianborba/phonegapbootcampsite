@@ -1,4 +1,1 @@
-app.controller('TalktousController', ['$scope',
-    function ($scope) {
-        
-}]);
+app.controller("TalktousController",["$scope",function(){}]);

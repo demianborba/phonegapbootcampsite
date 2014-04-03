@@ -1,4 +1,1 @@
-app.controller('PrerequisitsController', ['$scope',
-    function ($scope) {
-        
-}]);
+app.controller("PrerequisitsController",["$scope",function(){}]);

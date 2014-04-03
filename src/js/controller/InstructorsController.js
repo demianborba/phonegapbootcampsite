@@ -1,4 +1,4 @@
 app.controller('InstructorsController', ['$scope',
-    function ($scope) {
+    function (scope) {
         
 }]);

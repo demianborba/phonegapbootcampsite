@@ -1,4 +1,1 @@
-app.controller('InstructorsController', ['$scope',
-    function ($scope) {
-        
-}]);
+app.controller("InstructorsController",["$scope",function(){}]);

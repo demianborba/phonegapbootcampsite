@@ -1,4 +1,4 @@
 app.controller('PrerequisitsController', ['$scope',
-    function ($scope) {
+    function (scope) {
         
 }]);

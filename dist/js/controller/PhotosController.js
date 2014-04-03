@@ -1,4 +1,1 @@
-app.controller('PhotosController', ['$scope',
-    function ($scope) {
-        
-}]);
+app.controller("PhotosController",["$scope",function(){}]);

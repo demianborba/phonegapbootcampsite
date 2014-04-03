@@ -1,4 +1,1 @@
-app.controller('DatesLocationsController', ['$scope',
-    function ($scope) {
-        
-}]);
+app.controller("DatesLocationsController",["$scope",function(){}]);

@@ -1,4 +1,1 @@
-app.controller('QuotesController', ['$scope',
-    function ($scope) {
-        
-}]);
+app.controller("QuotesController",["$scope",function(){}]);

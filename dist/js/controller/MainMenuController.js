@@ -1,17 +1,1 @@
-app.controller('MainMenuController', ['$scope', '$http',
-    function ($scope, $http) {
-        $http.get('js/model/mainmenu.json').then(function (response) {
-            $scope.mainMenuItems = response.data;
-        });
-
-        $scope.gotoSection = function (routeToGo) {
-
-            if ($scope.snapper.state().state === 'left') {
-                $scope.snapper.close();
-            }
-            window.setTimeout(function () {
-                window.location.href = '#/' + routeToGo;
-                //console.log($routeProvider);
-            }, $scope.snapperTransitionSpeed*1000);
-        };
-}]);
+app.controller("MainMenuController",["$scope","$http",function(n,e){e.get("js/model/mainmenu.json").then(function(e){n.mainMenuItems=e.data}),n.gotoSection=function(e){"left"===n.snapper.state().state&&n.snapper.close(),window.setTimeout(function(){window.location.href="#/"+e},1e3*n.snapperTransitionSpeed)}}]);

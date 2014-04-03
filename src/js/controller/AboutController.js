@@ -1,4 +1,4 @@
 app.controller('AboutController', ['$scope',
-    function ($scope) {
+    function (scope) {
         
 }]);

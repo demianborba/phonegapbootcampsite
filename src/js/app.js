@@ -2,34 +2,34 @@ var app = angular.module('app', ['ngRoute']);
 
 // using [] to protect the $scope and logic to avoid getting broken after minification using uglify
 app.controller('AppController', ['$scope',
-    function ($scope) {
+    function (scope) {
         
         // defining the language
-        $scope.isPortuguese = true;
-        $scope.isEnglish = false;
+        scope.isPortuguese = true;
+        scope.isEnglish = false;
         
         // defining the transition speed for snapper
-        $scope.snapperTransitionSpeed = 0.2;
+        scope.snapperTransitionSpeed = 0.2;
         
         // defining snapper
-        $scope.snapper = new Snap({
+        scope.snapper = new Snap({
             element: document.getElementById('content'),
             disable: 'right',
-            transitionSpeed: $scope.snapperTransitionSpeed
+            transitionSpeed: scope.snapperTransitionSpeed
         });
         
         // tabButton functionality of snapper
-        $scope.openSnapper = function () {
-            if ($scope.snapper.state().state === 'closed') {
-                $scope.snapper.open('left');
+        scope.openSnapper = function () {
+            if (scope.snapper.state().state === 'closed') {
+                scope.snapper.open('left');
             }
         };
 }]);
 
 // configuring all routes
 app.config(['$routeProvider',
-    function ($routeProvider) {
-        $routeProvider.
+    function (routeProvider) {
+        routeProvider.
         when('/about', {
             templateUrl: 'partials/about.html',
             controller: 'AboutController'
@@ -81,19 +81,7 @@ app.config(['$routeProvider',
         otherwise({
             redirectTo: '/about'
         });
-}]);
-
-// snap js
-
-//var snapper;
-
-var addEvent = function addEvent(element, eventName, func) {
-    if (element.addEventListener) {
-        return element.addEventListener(eventName, func, false);
-    } else if (element.attachEvent) {
-        return element.attachEvent('on' + eventName, func);
-    }
-};
+}]); 
 
 window.onload = function () {
 

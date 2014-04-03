@@ -1,4 +1,1 @@
-app.controller('DurationController', ['$scope',
-    function ($scope) {
-        
-}]);
+app.controller("DurationController",["$scope",function(){}]);

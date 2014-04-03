@@ -1,4 +1,4 @@
 app.controller('PhotosController', ['$scope',
-    function ($scope) {
+    function (scope) {
         
 }]);

@@ -1,4 +1,4 @@
 app.controller('DurationController', ['$scope',
-    function ($scope) {
+    function (scope) {
         
 }]);
