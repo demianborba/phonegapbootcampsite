@@ -1,1 +1,1 @@
-app.controller("TalktousController",["$scope",function(){}]);
+app.controller("TalktousController",["$scope","AppEventManager",function(e,o){o.tellMenuNewSectionLoaded("talktous")}]);

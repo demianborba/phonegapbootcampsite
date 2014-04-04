@@ -1,4 +1,4 @@
-app.controller('PrerequisitsController', ['$scope',
-    function (scope) {
-        
+app.controller('PrerequisitsController', ['$scope','AppEventManager',
+    function (scope, AppEventManager) {        
+        AppEventManager.tellMenuNewSectionLoaded('prerequisits');
 }]);

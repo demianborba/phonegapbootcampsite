@@ -1,1 +1,1 @@
-app.controller("QuotesController",["$scope",function(){}]);
+app.controller("QuotesController",["$scope","AppEventManager",function(e,o){o.tellMenuNewSectionLoaded("quotes")}]);

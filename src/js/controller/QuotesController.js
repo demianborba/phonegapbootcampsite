@@ -1,4 +1,4 @@
-app.controller('QuotesController', ['$scope',
-    function (scope) {
-        
+app.controller('QuotesController', ['$scope','AppEventManager',
+    function (scope, AppEventManager) {        
+        AppEventManager.tellMenuNewSectionLoaded('quotes');
 }]);

@@ -1,4 +1,4 @@
-app.controller('AgendaController', ['$scope',
-    function (scope) {
-        
+app.controller('AgendaController', ['$scope','AppEventManager',
+    function (scope, AppEventManager) {        
+        AppEventManager.tellMenuNewSectionLoaded('agenda');
 }]);

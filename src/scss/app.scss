@@ -1,9 +1,12 @@
 // sass variables 
 $main-app-color:#288ac7;
+$main-menu-selected-color:#195b84;
+$main-font-color: white;
 $main-font-name:'Roboto Light';
 $main-font-location: '../fonts/Roboto/Roboto-Light.ttf';
 $font-icons-name: 'Glyphicons Halflings';
 $font-icons-location: '../fonts/Glyph/glyphicons-halflings-regular';
+$toolbar-height: 50px;
 
 // handle selection on touch
 
@@ -16,7 +19,7 @@ body {
     /* for android */
     -webkit-tap-highlight-color: transparent;
     user-select: none;
-    webkit-user-select: none;
+    webkit-user-select: none
 }
 
 input,
@@ -46,28 +49,37 @@ textarea {
     background: #d1d1d1
 }
 
+#scroll {
+    overflow: hidden;
+    overflow-y: scroll;
+    height: calc(100% - #{$toolbar-height});
+}
+
 // toolbar inside content area
 
 #toolbar {
-    position: absolute;
+    position: fixed;
     background-color: $main-app-color;
     bottom: 0;
     right: 0;
     left: 0;
     width: auto;
-    height: 50px;
-    position: fixed
+    height: $toolbar-height;
 }
 
 #toolbar h1 {
     font-family: $main-font-name;
     font-size: 15px;
-    color: white;
+    color: $main-font-color;
     margin: 0;
     text-align: center;
     padding-top: 14px;
     line-height: 22px;
     margin-left: 20px
+}
+
+#toolbar a {
+    cursor: pointer
 }
 
 // glyph icons
@@ -77,7 +89,7 @@ textarea {
     font-family: $font-icons-name;
     line-height: 1;
     font-size: 20px;
-    color: white;
+    color: $main-font-color;
     width: 50px;
     height: 50px;
     padding-top: 15px;
@@ -99,8 +111,21 @@ textarea {
 }
 .snap-drawer-left {
     background-color: $main-app-color;
-    font-family: $main-font-name;
+    font-family: $main-font-name
 }
+
+.menu-item-selected {
+    background-color: $main-menu-selected-color
+}
+
+.snap-drawer-left li {
+    cursor: pointer
+}
+
+.snap-drawer-left li:hover {
+    background-color: $main-menu-selected-color
+}
+
 .snap-drawer-left ul {
     padding: 0;
     margin: 0;
@@ -108,7 +133,7 @@ textarea {
 }
 .snap-drawer-left li p {
     font-size: 15px;
-    color: white;
+    color: $main-font-color;
     margin: 0;
     text-indent: 45px;
     padding: 15px
@@ -117,13 +142,13 @@ textarea {
     display: block;
     height: 50px;
     text-indent: 15px;
-    text-decoration: none;
+    text-decoration: none
 }
 
 // glyphicon contents
 
 .glyphicon-open-left:before {
-    content: "\e055";
+    content: "\e055"
 }
 .glyphicon-select:before {
     content: "\e055"
@@ -164,3 +189,18 @@ textarea {
 .glyphicon-talktous:before {
     content: "\2709"
 }
+
+// inner pages
+.innerpage {
+    // background-color: green;
+    padding:0 30px;
+}
+.innerpage h1 {
+    font-size: 50px;
+    line-height: .8;
+    letter-spacing: -2px; 
+}
+
+
+
+

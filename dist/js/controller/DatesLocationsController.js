@@ -1,1 +1,1 @@
-app.controller("DatesLocationsController",["$scope",function(){}]);
+app.controller("DatesLocationsController",["$scope","AppEventManager",function(e,o){o.tellMenuNewSectionLoaded("dateslocations")}]);

@@ -1,1 +1,1 @@
-app.controller("VideosController",["$scope",function(){}]);
+app.controller("VideosController",["$scope","AppEventManager",function(e,o){o.tellMenuNewSectionLoaded("videos")}]);

@@ -26,6 +26,18 @@ app.controller('AppController', ['$scope',
         };
 }]);
 
+// creating a service called App Event Manager for controllers to talk to each other
+app.factory('AppEventManager', ['$rootScope', 
+    function(rootScope) {
+        var eventManager = {};
+        
+        eventManager.tellMenuNewSectionLoaded = function (section) {
+            rootScope.$broadcast('NewSectionLoaded', section);
+        };
+        
+        return eventManager;
+}]);
+
 // configuring all routes
 app.config(['$routeProvider',
     function (routeProvider) {

@@ -1,4 +1,4 @@
-app.controller('AboutController', ['$scope',
-    function (scope) {
-        
+app.controller('AboutController', ['$scope','AppEventManager',
+    function (scope, AppEventManager) {        
+        AppEventManager.tellMenuNewSectionLoaded('about');
 }]);

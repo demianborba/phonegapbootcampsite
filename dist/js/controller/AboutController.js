@@ -1,1 +1,1 @@
-app.controller("AboutController",["$scope",function(){}]);
+app.controller("AboutController",["$scope","AppEventManager",function(e,o){o.tellMenuNewSectionLoaded("about")}]);

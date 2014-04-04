@@ -1,4 +1,4 @@
-app.controller('TalktousController', ['$scope',
-    function (scope) {
-        
+app.controller('TalktousController', ['$scope','AppEventManager',
+    function (scope, AppEventManager) {        
+        AppEventManager.tellMenuNewSectionLoaded('talktous');
 }]);

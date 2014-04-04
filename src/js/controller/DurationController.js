@@ -1,4 +1,4 @@
-app.controller('DurationController', ['$scope',
-    function (scope) {
-        
+app.controller('DurationController', ['$scope','AppEventManager',
+    function (scope, AppEventManager) {        
+        AppEventManager.tellMenuNewSectionLoaded('duration');
 }]);

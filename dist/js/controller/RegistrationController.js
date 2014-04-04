@@ -1,1 +1,1 @@
-app.controller("RegistrationController",["$scope",function(){}]);
+app.controller("RegistrationController",["$scope","AppEventManager",function(e,n){n.tellMenuNewSectionLoaded("registration")}]);

@@ -1,1 +1,1 @@
-app.controller("PhotosController",["$scope",function(){}]);
+app.controller("PhotosController",["$scope","AppEventManager",function(o,e){e.tellMenuNewSectionLoaded("photos")}]);

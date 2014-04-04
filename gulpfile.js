@@ -75,12 +75,6 @@ gulp.task('scripts', function () {
         .pipe(notify("js minified and files sent to /dist"));
 });
 
-gulp.task('json-model', function () {
-    gulp.src('src/js/model/**')
-        .pipe(gulp.dest('dist/js/model/'))
-        .pipe(notify("json model resent to dist because uglify cleans it all"));
-});
-
 gulp.task('browser-sync', function () {
     browserSync.init(['dist/**'], {
         server: {
@@ -91,15 +85,15 @@ gulp.task('browser-sync', function () {
 
 gulp.task('default', function () {
 
-    gulp.run('sass', 'html', 'partials', 'images', 'fonts', 'bower_components', 'lint', 'scripts', 'json-model');
-    //    gulp.run('sass', 'html', 'partials', 'images', 'fonts', 'bower_components', 'lint', 'scripts', 'json-model', 'browser-sync');
+    gulp.run('sass', 'html', 'partials', 'images', 'fonts', 'bower_components', 'lint', 'scripts');
+    // gulp.run('sass', 'html', 'partials', 'images', 'fonts', 'bower_components', 'lint', 'scripts', 'browser-sync');
 
     gulp.watch('src/scss/*.scss', function () {
         gulp.run('sass');
     });
 
     gulp.watch('src/js/**', function () {
-        gulp.run('lint', 'scripts', 'json-model');
+        gulp.run('lint', 'scripts');
     });
 
     gulp.watch('src/*.html', function () {
