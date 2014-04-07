@@ -1,4 +1,5 @@
 // sass variables 
+
 $main-app-color:#288ac7;
 $main-menu-selected-color:#195b84;
 $main-font-color: white;
@@ -7,6 +8,55 @@ $main-font-location: '../fonts/Roboto/Roboto-Light.ttf';
 $font-icons-name: 'Glyphicons Halflings';
 $font-icons-location: '../fonts/Glyph/glyphicons-halflings-regular';
 $toolbar-height: 50px;
+
+// media querie : mobile
+@media (max-width: 1024px) {
+    body {
+        color: red;
+    }
+    .snap-drawer-left li:hover {}
+    .snap-drawer-left li {}
+    #wrapper {}
+    #mobilephones {}
+}
+// media querie : desktop
+@media (min-width: 1024px) {
+    body {
+        color: green;
+    }
+    .snap-drawer-left li:hover {
+        background-color: $main-menu-selected-color
+    }
+    .snap-drawer-left li {
+        cursor: pointer;
+    }
+    #mobilephones {
+        position: absolute;
+        background: url('../images/background-mobilephones.jpg');
+        background-repeat:no-repeat;
+        width: 1191px;
+        height: 557px;
+        margin: auto;  
+        left:0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    #wrapper {
+        position: absolute;
+        background-color: red;
+        width: 320px;
+        height: 480px;
+        margin: auto;  
+        left:0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin-top: 31px;
+        margin-left: 436px;
+        overflow: hidden;
+    }
+}
 
 // handle selection on touch
 
@@ -19,19 +69,19 @@ body {
     /* for android */
     -webkit-tap-highlight-color: transparent;
     user-select: none;
-    webkit-user-select: none
+    webkit-user-select: none;
 }
 
 input,
 textarea {
-    user-select: text
+    user-select: text;
 }
 
 // fonts faces
 
 @font-face {
     font-family: $main-font-name;
-    src: url($main-font-location)
+    src: url($main-font-location);
 }
 
 @font-face {
@@ -40,13 +90,13 @@ textarea {
     src:url(#{$font-icons-location}.eot?#iefix) format('embedded-opentype'),
     url(#{$font-icons-location}.woff) format('woff'),
     url(#{$font-icons-location}.ttf) format('truetype'),
-    url(#{$font-icons-location}.svg#glyphicons_halflingsregular) format('svg')
+    url(#{$font-icons-location}.svg#glyphicons_halflingsregular) format('svg');
 }
 
 // main content area
 
 #content {
-    background: #d1d1d1
+    background: #d1d1d1;
 }
 
 #scroll {
@@ -75,11 +125,11 @@ textarea {
     text-align: center;
     padding-top: 14px;
     line-height: 22px;
-    margin-left: 20px
+    margin-left: 20px;
 }
 
 #toolbar a {
-    cursor: pointer
+    cursor: pointer;
 }
 
 // glyph icons
@@ -96,7 +146,7 @@ textarea {
 /*    background-color: cyan;*/
     text-align: center;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
+    -moz-osx-font-smoothing: grayscale;
 }
 
 // additions to snapjs snap.css
@@ -104,90 +154,82 @@ textarea {
 .snap-content {
     overflow-x: hidden;
     overflow-y: auto;
-    background: #d8d8d8
+    background: #d8d8d8;
 }
 .snap-drawers {
-    background: $main-app-color
+    background: $main-app-color;
 }
 .snap-drawer-left {
     background-color: $main-app-color;
-    font-family: $main-font-name
+    font-family: $main-font-name;
 }
 
 .menu-item-selected {
-    background-color: $main-menu-selected-color
-}
-
-.snap-drawer-left li {
-    cursor: pointer
-}
-
-.snap-drawer-left li:hover {
-    background-color: $main-menu-selected-color
+    background-color: $main-menu-selected-color;
 }
 
 .snap-drawer-left ul {
     padding: 0;
     margin: 0;
-    list-style-type: none
+    list-style-type: none;
 }
 .snap-drawer-left li p {
     font-size: 15px;
     color: $main-font-color;
     margin: 0;
     text-indent: 45px;
-    padding: 15px
+    padding: 15px;
 }
 .snap-drawer-left li > a {
     display: block;
     height: 50px;
     text-indent: 15px;
-    text-decoration: none
+    text-decoration: none;
 }
 
 // glyphicon contents
 
 .glyphicon-open-left:before {
-    content: "\e055"
+    content: "\e055";
 }
 .glyphicon-select:before {
-    content: "\e055"
+    content: "\e055";
 }
 .glyphicon-about:before {
-    content: "\e118"
+    content: "\e118";
 }
 .glyphicon-quotes:before {
-    content: "\e111"
+    content: "\e111";
 }
 .glyphicon-instructors:before {
-    content: "\e008"
+    content: "\e008";
 }
 .glyphicon-agenda:before {
-    content: "\e032"
+    content: "\e032";
 }
 .glyphicon-duration:before {
-    content: "\e023"
+    content: "\e023";
 }
 .glyphicon-registration:before {
-    content: "\e084"
+    content: "\e084";
 }
 .glyphicon-prerequisits:before {
-    content: "\e137"
+    content: "\e137";
 }
 .glyphicon-target:before {
-    content: "\e165"
+    content: "\e165";
 }
 .glyphicon-dateslocations:before {
-    content: "\e109"
+    content: "\e109";
 }
 .glyphicon-videos:before {
-    content: "\e009"
+    content: "\e009";
 }
 .glyphicon-photos:before {
-    content: "\e046"
+    content: "\e046";
 }
 .glyphicon-talktous:before {
-    content: "\2709"
+    content: "\2709";
 }
 
 // inner pages
