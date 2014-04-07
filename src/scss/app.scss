@@ -11,9 +11,6 @@ $toolbar-height: 50px;
 
 // media querie : mobile
 @media (max-width: 1024px) {
-    body {
-        color: red;
-    }
     .snap-drawer-left li:hover {}
     .snap-drawer-left li {}
     #wrapper {}
@@ -21,21 +18,18 @@ $toolbar-height: 50px;
 }
 // media querie : desktop
 @media (min-width: 1024px) {
-    body {
-        color: green;
-    }
     .snap-drawer-left li:hover {
         background-color: $main-menu-selected-color
     }
     .snap-drawer-left li {
         cursor: pointer;
     }
-    #mobilephones {
+    #smartphones-image-for-desktop {
         position: absolute;
-        background: url('../images/background-mobilephones.jpg');
+        background: url('../images/smartphones-image.jpg');
         background-repeat:no-repeat;
         width: 1191px;
-        height: 557px;
+        height: 756px;
         margin: auto;  
         left:0;
         right: 0;
@@ -44,16 +38,15 @@ $toolbar-height: 50px;
     }
     #wrapper {
         position: absolute;
-        background-color: red;
         width: 320px;
-        height: 480px;
+        height: 532px;
         margin: auto;  
         left:0;
         right: 0;
         top: 0;
         bottom: 0;
-        margin-top: 31px;
-        margin-left: 436px;
+        margin-top: 110px;
+        margin-left: 432px;
         overflow: hidden;
     }
 }
@@ -96,7 +89,7 @@ textarea {
 // main content area
 
 #content {
-    background: #d1d1d1;
+   background: white;
 }
 
 #scroll {
@@ -154,7 +147,6 @@ textarea {
 .snap-content {
     overflow-x: hidden;
     overflow-y: auto;
-    background: #d8d8d8;
 }
 .snap-drawers {
     background: $main-app-color;
@@ -235,12 +227,36 @@ textarea {
 // inner pages
 .innerpage {
     // background-color: green;
-    padding:0 30px;
+    padding:0;
+    margin: 0;
 }
 .innerpage h1 {
-    font-size: 50px;
+    font-size: 40px;
     line-height: .8;
     letter-spacing: -2px; 
+    padding:0 20px 0;
+    text-transform:uppercase;
+    color: $main-app-color;
+}
+.innerpage p {
+    font-size: 13px;
+    color: #6c6b6b;
+    padding: 5px 25px;
+}
+.innerpage a {
+    color: $main-app-color;
+    text-decoration: none;
+}
+.innerpage .highlight {
+    background-color: #cbcbcb;
+    color: #6c6b6b;
+    padding: 25px;
+    margin-top: 0;
+}
+.innerpage .header-image {
+    width: 100%;
+    padding: 0;
+    margin-bottom: -5px;
 }
 
 
