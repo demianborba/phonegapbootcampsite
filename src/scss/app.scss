@@ -136,7 +136,6 @@ textarea {
     width: 50px;
     height: 50px;
     padding-top: 15px;
-/*    background-color: cyan;*/
     text-align: center;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -168,14 +167,15 @@ textarea {
 .snap-drawer-left li p {
     font-size: 15px;
     color: $main-font-color;
-    margin: 0;
-    text-indent: 45px;
+    margin: 0 0 0 45px;
     padding: 15px;
+}
+.snap-drawer-left .glyphicon {
+    margin-left: 5px;
 }
 .snap-drawer-left li > a {
     display: block;
     height: 50px;
-    text-indent: 15px;
     text-decoration: none;
 }
 
@@ -234,8 +234,10 @@ textarea {
     font-size: 40px;
     line-height: .8;
     letter-spacing: -2px; 
-    padding:0 20px 0;
+    padding:5px 20px 0 10px;
+    margin:50px 0 50px 20px;
     text-transform:uppercase;
+    border-left: 10px solid #cbcbcb;
     color: $main-app-color;
 }
 .innerpage p {
@@ -252,13 +254,19 @@ textarea {
     color: #6c6b6b;
     padding: 25px;
     margin-top: 0;
+    margin-bottom: 35px;
 }
 .innerpage .header-image {
     width: 100%;
     padding: 0;
     margin-bottom: -5px;
 }
-
+.innerpage footer {
+    background-color: #cbcbcb;
+    color: #6c6b6b;
+    margin-top: 0;
+    padding: 20px 0 20px 0;
+}
 
 
 
