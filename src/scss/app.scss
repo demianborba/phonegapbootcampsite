@@ -21,9 +21,6 @@ $toolbar-height: 50px;
     .snap-drawer-left li:hover {
         background-color: $main-menu-selected-color
     }
-    .snap-drawer-left li {
-        cursor: pointer;
-    }
     #smartphones-image-for-desktop {
         position: absolute;
         background: url('../images/smartphones-image.jpg');
@@ -62,9 +59,12 @@ body {
     /* for android */
     -webkit-tap-highlight-color: transparent;
     user-select: none;
-    webkit-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select:none;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    cursor: default;
 }
-
 input,
 textarea {
     user-select: text;
@@ -89,7 +89,8 @@ textarea {
 // main content area
 
 #content {
-   background: white;
+    background: white;
+    overflow: hidden;
 }
 
 #scroll {
@@ -101,9 +102,7 @@ textarea {
 // toolbar inside content area
 
 #toolbar {
-    position: fixed;
     background-color: $main-app-color;
-    bottom: 0;
     right: 0;
     left: 0;
     width: auto;
@@ -178,7 +177,9 @@ textarea {
     height: 50px;
     text-decoration: none;
 }
-
+.snap-drawer-left li {
+    cursor: pointer;
+}
 // glyphicon contents
 
 .glyphicon-open-left:before {
@@ -243,7 +244,7 @@ textarea {
 .innerpage p {
     font-size: 13px;
     color: #6c6b6b;
-    padding: 5px 25px;
+    padding: 5px 25px 0 25px;
 }
 .innerpage a {
     color: $main-app-color;
@@ -256,16 +257,14 @@ textarea {
     margin-top: 0;
     margin-bottom: 35px;
 }
-.innerpage .header-image {
+.innerpage img {
     width: 100%;
     padding: 0;
     margin-bottom: -5px;
 }
 .innerpage footer {
-    background-color: #cbcbcb;
-    color: #6c6b6b;
     margin-top: 0;
-    padding: 20px 0 20px 0;
+    padding: 0 0 20px 0;
 }
 
 
