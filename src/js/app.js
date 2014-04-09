@@ -34,6 +34,7 @@ app.controller('AppController', ['$scope',
         });
         scope.$on('$routeChangeSuccess', function(event, currRoute, prevRoute){
             scope.isRouting = false;
+            document.getElementById("scroll").scrollTop = 0;
         });
 }]);
 
@@ -50,7 +51,7 @@ app.factory('AppEventManager', ['$rootScope',
 }]);
 
 // configuring all routes
-app.config(['$routeProvider',
+app.config(['$routeProvider', 
     function (routeProvider) {
         routeProvider.
         when('/about', {
