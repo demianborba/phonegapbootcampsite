@@ -47,7 +47,8 @@
         },
         eventList = {},
         utils = {
-            hasTouch: ('ontouchstart' in doc.documentElement || win.navigator.msPointerEnabled),
+            hasTouch: (doc.ontouchstart === null),
+            // hasTouch: ('ontouchstart' in doc.documentElement || win.navigator.msPointerEnabled),
             eventType: function(action) {
                 var eventTypes = {
                         down: (utils.hasTouch ? 'touchstart' : 'mousedown'),

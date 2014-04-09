@@ -7,6 +7,7 @@ app.controller('AppController', ['$scope',
         // defining the language
         scope.isPortuguese = true;
         scope.isEnglish = false;
+        scope.isRouting = false;
         
         // defining the transition speed for snapper
         scope.snapperTransitionSpeed = 0.2;
@@ -22,8 +23,18 @@ app.controller('AppController', ['$scope',
         scope.openSnapper = function () {
             if (scope.snapper.state().state === 'closed') {
                 scope.snapper.open('left');
+            } else {
+                scope.snapper.close();
             }
         };
+        
+        // detecting when routing occurs
+        scope.$on('$routeChangeStart', function(event, currRoute, prevRoute){
+            scope.isRouting = true;
+        });
+        scope.$on('$routeChangeSuccess', function(event, currRoute, prevRoute){
+            scope.isRouting = false;
+        });
 }]);
 
 // creating a service called App Event Manager for controllers to talk to each other
@@ -109,5 +120,5 @@ window.onload = function () {
 };
 
 function adjustListMenuLeftPaddingTop() {
-    document.getElementById('list-menu-left').style.paddingTop = window.innerHeight / 2 + 'px';
+    document.getElementById('list-menu-left').style.paddingTop = window.innerHeight / 3 + 'px';
 }

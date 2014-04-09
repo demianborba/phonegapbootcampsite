@@ -1,1 +1,1 @@
-app.controller("AboutController",["$scope","AppEventManager",function(e,o){o.tellMenuNewSectionLoaded("about")}]);
+app.controller("AboutController",["$scope","AppEventManager",function(o,e){e.tellMenuNewSectionLoaded("about"),o.gotoFacebook=function(){window.location.href="http://www.facebook.com/phonegapbootcamp"}}]);

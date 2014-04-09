@@ -52,8 +52,14 @@
                     <div class="snap-drawer snap-drawer-right"></div>
                     <div id="content" class="snap-content">
                         <div id="scroll">
-                            <ng-view></ng-view>
+                            <div ng-show="isRouting">
+                                <h1>Loading</h1>
+                            </div>
+                            <div ng-show="!isRouting">
+                                <ng-view></ng-view>
+                            </div>
                         </div>
+
                         <div id="toolbar">
                             <a ng-click="openSnapper()">
                                 <span class="glyphicon glyphicon-open-left"></span>
