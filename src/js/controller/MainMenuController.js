@@ -1,79 +1,79 @@
-app.controller('MainMenuController', ['$scope', '$http', '$element', 'AppEventManager',
-    function (scope, http, element, AppEventManager) {
-        scope.mainMenuItems = [
+app.controller('MainMenuController', ['$scope', '$http', '$element', 'AppEventManager','$rootScope',
+    function (scope, http, element, AppEventManager, rootScope) {
+        rootScope.mainMenuItems = [
             {
-                "labelPortuguese": "Sobre o Bootcamp",
-                "labelEnglish": "About the Bootcamp",
+                "ptLabel": "Sobre o Bootcamp",
+                "enLabel": "About the Bootcamp",
                 "icon": "glyphicon-about",
                 "clickRoute": "about"
             },
             {
-                "labelPortuguese": "Depoimentos",
-                "labelEnglish": "Testimonials",
+                "ptLabel": "Depoimentos",
+                "enLabel": "Testimonials",
                 "icon": "glyphicon-quotes",
                 "clickRoute": "quotes"
             },
             {
-                "labelPortuguese": "Instrutores",
-                "labelEnglish": "Instructors",
+                "ptLabel": "Instrutores",
+                "enLabel": "Instructors",
                 "icon": "glyphicon-instructors",
                 "clickRoute": "instructors"
             },
             {
-                "labelPortuguese": "Agenda",
-                "labelEnglish": "Agenda",
+                "ptLabel": "Agenda",
+                "enLabel": "Agenda",
                 "icon": "glyphicon-agenda",
                 "clickRoute": "agenda"
             },
             {
-                "labelPortuguese": "Duração",
-                "labelEnglish": "Duration",
+                "ptLabel": "Duração",
+                "enLabel": "Duration",
                 "icon": "glyphicon-duration",
                 "clickRoute": "duration"
             },
             {
-                "labelPortuguese": "Inscrições",
-                "labelEnglish": "Registration",
+                "ptLabel": "Inscrições",
+                "enLabel": "Registration",
                 "icon": "glyphicon-registration",
                 "clickRoute": "registration"
             },
             {
-                "labelPortuguese": "Pré-requisitos",
-                "labelEnglish": "Pre-requisits",
+                "ptLabel": "Pré-requisitos",
+                "enLabel": "Pre-requisits",
                 "icon": "glyphicon-prerequisits",
                 "clickRoute": "prerequisits"
             },
             {
-                "labelPortuguese": "Público Alvo",
-                "labelEnglish": "Target Audience",
+                "ptLabel": "Público Alvo",
+                "enLabel": "Target Audience",
                 "icon": "glyphicon-target",
                 "clickRoute": "target"
             },
             {
-                "labelPortuguese": "Datas e Locais",
-                "labelEnglish": "Dates and Locations",
+                "ptLabel": "Datas e Locais",
+                "enLabel": "Dates and Locations",
                 "icon": "glyphicon-dateslocations",
                 "clickRoute": "dateslocations"
             },
             {
-                "labelPortuguese": "Vídeos",
-                "labelEnglish": "Videos",
+                "ptLabel": "Vídeos",
+                "enLabel": "Videos",
                 "icon": "glyphicon-videos",
                 "clickRoute": "videos"
             },
             {
-                "labelPortuguese": "Fotos",
-                "labelEnglish": "Photos",
+                "ptLabel": "Fotos",
+                "enLabel": "Photos",
                 "icon": "glyphicon-photos",
                 "clickRoute": "photos"
             },
             {
-                "labelPortuguese": "Fale com a organização",
-                "labelEnglish": "Talk to the organizers",
+                "ptLabel": "Fale com a organização",
+                "enLabel": "Talk to the organizers",
                 "icon": "glyphicon-talktous",
                 "clickRoute": "talktous"
             }
-        ]
+        ];
         
         scope.$on('NewSectionLoaded', function(event, args){
             

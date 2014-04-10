@@ -204,6 +204,39 @@ ng-view {
     }
 }
 
+// language selectors
+.caption-language-selector {
+    padding: 20px;
+    color: $main-menu-selected-color;
+    font-size: 14px;
+}
+#language-selectors {
+    padding: 20px;
+    margin-bottom: 50px;
+    color: $main-menu-selected-color;
+    font-size: 14px;
+}
+#language-selectors span {
+    padding: 8px 10px 8px 10px;
+    margin-right: 10px;
+    border: 1px solid $main-menu-selected-color;
+}
+#language-selectors span:hover {
+    color: $main-font-color;
+    border: 1px solid $main-font-color;
+    cursor: pointer;
+}
+#language-selectors .selected {
+    color: $main-font-color;
+    background-color: $main-menu-selected-color;
+}
+#language-selectors .selected:hover {
+    color: $main-font-color;
+    background-color: $main-menu-selected-color;
+    border: 1px solid $main-menu-selected-color;
+    cursor: default;
+}
+
 // glyphicon contents
 .glyphicon-open-left:before {
     content: "\e055";

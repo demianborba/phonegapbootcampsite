@@ -65,6 +65,9 @@ gulp.task('bower_components', function () {
 
     gulp.src('src/bower_components/angular/angular.min.js')
         .pipe(gulp.dest('dist/bower_components/angular/'));
+    
+    gulp.src('src/bower_components/angular/angular.min.js.map')
+        .pipe(gulp.dest('dist/bower_components/angular/'));
 });
 
 gulp.task('scripts', function () {
