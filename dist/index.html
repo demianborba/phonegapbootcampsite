@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app="app">
 
 <head>
     <title>PhoneGap Bootcamp</title>
@@ -15,6 +15,7 @@
     <script type="text/javascript" src="bower_components/snapjs/snap.js"></script>
     <script type="text/javascript" src="bower_components/fastclick/lib/fastclick.js"></script>
     <script type="text/javascript" src="js/angularextras/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/angularextras/angular-animate.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/controller/MainMenuController.js"></script>
     <script type="text/javascript" src="js/controller/AboutController.js"></script>
@@ -31,47 +32,43 @@
     <script type="text/javascript" src="js/controller/VideosController.js"></script>
 </head>
 
-<body>
-    <div ng-app="app">
-        <div id="smartphones-image-for-desktop">
-            <div id="wrapper">
-                <div ng-controller="AppController">
-                    <div class="snap-drawers">
-                        <div class="snap-drawer snap-drawer-left">
-                            <ul id="list-menu-left" ng-controller="MainMenuController">
-                                <li id="{{item.clickRoute}}" ng-repeat="item in mainMenuItems">
-                                    <a ng-click="gotoSection(item.clickRoute)">
-                                        <span class="glyphicon {{item.icon}}"></span>
-                                        <p ng-if="isPortuguese">{{item.labelPortuguese}}</p>
-                                        <p ng-if="isEnglish">{{item.labelEnglish}}</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="snap-drawer snap-drawer-right"></div>
-                    <div id="content" class="snap-content">
-                        <div id="scroll">
-                            <div ng-show="isRouting">
-                                <h1>Loading</h1>
-                            </div>
-                            <div ng-show="!isRouting">
-                                <ng-view></ng-view>
-                            </div>
-                        </div>
+<body ng-controller="AppController">
 
-                        <div id="toolbar">
-                            <a ng-click="openSnapper()">
-                                <span class="glyphicon glyphicon-open-left"></span>
+    <div id="smartphones-image-for-desktop">
+        <div id="wrapper">
+            <div class="snap-drawers">
+                <div class="snap-drawer snap-drawer-left">
+                    <ul id="list-menu-left" ng-controller="MainMenuController">
+                        <li id="{{item.clickRoute}}" ng-repeat="item in mainMenuItems">
+                            <a ng-click="gotoSection(item.clickRoute)">
+                                <span class="glyphicon {{item.icon}}"></span>
+                                <p ng-if="isPortuguese">{{item.labelPortuguese}}</p>
+                                <p ng-if="isEnglish">{{item.labelEnglish}}</p>
                             </a>
-                            <h1>PhoneGap Bootcamp</h1>
-                        </div>
-
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="snap-drawer snap-drawer-right"></div>
+            <div id="content" class="snap-content">
+                <div id="scrollable-content-area">
+                    <div ng-show="isRouting">
+                        <h1>Loading</h1>
                     </div>
+                    <div ng-show="!isRouting">
+                        <ng-view></ng-view>
+                    </div>
+                </div>
+                <div id="toolbar">
+                    <a ng-click="openSnapper()">
+                        <span class="glyphicon glyphicon-open-left"></span>
+                    </a>
+                    <h1 id="label-toolbar">PhoneGap Bootcamp</h1>
                 </div>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>

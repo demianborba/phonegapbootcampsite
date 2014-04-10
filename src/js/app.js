@@ -1,8 +1,19 @@
-var app = angular.module('app', ['ngRoute']);
+window.onload = function () {
+    // initialize fast click
+    FastClick.attach(document.body);
+}
+
+var app = angular.module('app', ['ngRoute', 'ngAnimate']);
 
 // using [] to protect the $scope and logic to avoid getting broken after minification using uglify
-app.controller('AppController', ['$scope',
-    function (scope) {
+app.controller('AppController', ['$scope','$rootScope',
+    function (scope, rootScope) {
+        
+        // referencing HTML elements (GLOBAL VARIABLES)
+        rootScope.scrollableContent = document.getElementById('scrollable-content-area');
+        rootScope.labelToolbar = document.getElementById('label-toolbar');
+        rootScope.content = document.getElementById('content');
+        rootScope.mainMenu = document.getElementById('list-menu-left');
         
         // defining the language
         scope.isPortuguese = true;
@@ -14,7 +25,7 @@ app.controller('AppController', ['$scope',
         
         // defining snapper
         scope.snapper = new Snap({
-            element: document.getElementById('content'),
+            element:  rootScope.content,
             disable: 'right',
             transitionSpeed: scope.snapperTransitionSpeed
         });
@@ -34,12 +45,21 @@ app.controller('AppController', ['$scope',
         });
         scope.$on('$routeChangeSuccess', function(event, currRoute, prevRoute){
             scope.isRouting = false;
-            document.getElementById("scroll").scrollTop = 0;
+            rootScope.scrollableContent.scrollTop = 0;
         });
+        
+        // adjust Y position of mainMenu to facilitate tap using thumb
+        scope.resetYpositionMainMenu = function() {
+            rootScope.mainMenu.style.paddingTop = window.innerHeight / 3 + 'px';
+        }
+        scope.resetYpositionMainMenu();
+        window.addEventListener('orientationchange', function () {
+            scope.resetYpositionMainMenu();
+        }, false);
 }]);
 
 // creating a service called App Event Manager for controllers to talk to each other
-app.factory('AppEventManager', ['$rootScope', 
+app.factory('AppEventManager', ['$rootScope',
     function(rootScope) {
         var eventManager = {};
         
@@ -105,21 +125,4 @@ app.config(['$routeProvider',
         otherwise({
             redirectTo: '/about'
         });
-}]); 
-
-window.onload = function () {
-
-    //position list in drawer-left to be displayed in the middle vertically
-    adjustListMenuLeftPaddingTop();
-
-    // initialize fast click
-    FastClick.attach(document.body);
-
-    window.addEventListener('orientationchange', function () {
-        adjustListMenuLeftPaddingTop();
-    }, false);
-};
-
-function adjustListMenuLeftPaddingTop() {
-    document.getElementById('list-menu-left').style.paddingTop = window.innerHeight / 3 + 'px';
-}
+}]);

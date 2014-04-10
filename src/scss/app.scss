@@ -1,5 +1,4 @@
 // sass variables 
-
 $main-app-color:#288ac7;
 $main-menu-selected-color:#195b84;
 $main-font-color: white;
@@ -16,6 +15,7 @@ $toolbar-height: 50px;
     #wrapper {}
     #mobilephones {}
 }
+
 // media querie : desktop
 @media (min-width: 1024px) {
     .snap-drawer-left li:hover {
@@ -49,7 +49,6 @@ $toolbar-height: 50px;
 }
 
 // handle selection on touch
-
 html,
 body {
     position: absolute;
@@ -74,7 +73,6 @@ textarea {
 }
 
 // fonts faces
-
 @font-face {
     font-family: $main-font-name;
     src: url($main-font-location);
@@ -90,20 +88,17 @@ textarea {
 }
 
 // main content area
-
 #content {
     background: white;
     overflow: hidden;
 }
-
-#scroll {
+#scrollable-content-area {
     overflow-x: hidden;
     height: #{532 - $toolbar-height};
     height: calc(100% - #{$toolbar-height});
 }
 
 // toolbar inside content area
-
 #toolbar {
     background-color: $main-app-color;
     right: 0;
@@ -111,7 +106,6 @@ textarea {
     width: auto;
     height: $toolbar-height;
 }
-
 #toolbar h1 {
     font-family: $main-font-name;
     font-size: 15px;
@@ -122,13 +116,11 @@ textarea {
     line-height: 22px;
     margin-left: 20px;
 }
-
 #toolbar a {
     cursor: pointer;
 }
 
 // glyph icons
-
 .glyphicon {
     position: absolute;
     font-family: $font-icons-name;
@@ -144,7 +136,6 @@ textarea {
 }
 
 // additions to snapjs snap.css
-
 .snap-content {
     overflow-x: hidden;
     overflow-y: auto;
@@ -183,8 +174,37 @@ textarea {
 .snap-drawer-left li {
     cursor: pointer;
 }
-// glyphicon contents
+.disable-content-scrolling {
+    pointer-events: none;
+}
 
+// angular animations
+ng-view {
+    display: block;
+    position: relative;
+}
+.ng-enter {
+    -webkit-animation: enter .2s ease-in;
+    animation: enter .2s ease-in;
+}
+
+.ng-leave {
+  
+}
+
+@-webkit-keyframes enter {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+// glyphicon contents
 .glyphicon-open-left:before {
     content: "\e055";
 }
@@ -234,7 +254,7 @@ textarea {
     padding:0;
     margin: 0;
 }
-.innerpage h1, #scroll h1 {
+.innerpage h1, #scrollable-content-area h1 {
     font-size: 40px;
     line-height: .8;
     letter-spacing: -2px; 

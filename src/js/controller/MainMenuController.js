@@ -1,4 +1,4 @@
-app.controller('MainMenuController', ['$scope', '$http', '$element', 'AppEventManager', 
+app.controller('MainMenuController', ['$scope', '$http', '$element', 'AppEventManager',
     function (scope, http, element, AppEventManager) {
         scope.mainMenuItems = [
             {
@@ -88,13 +88,7 @@ app.controller('MainMenuController', ['$scope', '$http', '$element', 'AppEventMa
         });
 
         scope.gotoSection = function (routeToGo) {
-            
-            if (scope.snapper.state().state === 'left') {
-                scope.snapper.close();
-            }
-
-            window.setTimeout(function () {
-                window.location.href = '#/' + routeToGo;
-            }, scope.snapperTransitionSpeed * 1000);
+            scope.snapper.close();
+            window.location.href = '#/' + routeToGo;
         };
 }]);
