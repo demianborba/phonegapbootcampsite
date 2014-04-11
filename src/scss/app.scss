@@ -364,5 +364,62 @@ ng-view {
 .innerpage button:hover {
 	background-color: $main-menu-selected-color;
 }
-
-
+// inner page tables
+.innerpage #table-container {
+    margin: -10px;
+}
+.innerpage table {
+    font-size: 10px;
+    width: 100%;
+    text-align: left;
+    color: #6c6b6b;
+    border-spacing: 0;
+    margin-bottom: 20px;
+}
+.innerpage table tr:nth-child(odd) {
+    background-color: #ccc;    
+}
+.innerpage table tr:nth-child(even) {
+    background-color: #e0dfdf;
+}
+.innerpage th {
+    background-color: $main-app-color;
+    text-align: center;
+    padding: 10px;
+    color: $main-font-color;
+    height: 50px;
+    font-size: 13px;
+}
+.innerpage .head-left {
+    width: 80px;
+    text-transform:uppercase;
+}
+.innerpage .head-right {
+    text-transform:uppercase;
+}
+.innerpage .col-a {
+    text-align: center;
+    font-size: 10px;
+    vertical-align: middle;
+    color: #5a5959;
+    padding-left: 10px;
+}
+.innerpage .col-b {
+    font-size: 10px;
+    vertical-align: middle;
+    line-height: 1.5;
+    padding: 20px 30px 20px 10px;
+}
+.innerpage .col-b li {
+    font-size: 10px;
+}
+.innerpage .col-b ul {
+    margin-bottom: 0;
+    padding-left: 0;
+    margin-left: 20px;
+}
+.innerpage .foot {
+    background-color: #b2b0b0;
+    color: #605f5f;
+    padding: 20px;
+}

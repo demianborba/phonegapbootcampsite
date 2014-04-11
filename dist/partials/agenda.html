@@ -1,12 +1,77 @@
 <div class="innerpage">
     <header>
-        <h1 ng-if="isPortuguese" ng-bind-html="pageItems.title.ptLabel"></ng-bind-html></h1>
-        <h1 ng-if="isEnglish" ng-bind-html="pageItems.title.enLabel"></ng-bind-html></h1>
+        <h1 ng-if="isPortuguese" ng-bind-html="pageItems.title.ptLabel">
+            </ng-bind-html>
+        </h1>
+        <h1 ng-if="isEnglish" ng-bind-html="pageItems.title.enLabel">
+            </ng-bind-html>
+        </h1>
     </header>
 
     <main>
-        <p>Em breve (Coming Soon).</p>
+
+        <div id="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th ng-if="isPortuguese" scope="col" class="head-left">{{pageItems.day1.ptLabel}}</th>
+                        <th ng-if="isEnglish" scope="col" class="head-left">{{pageItems.day1.enLabel}}</th>
+
+                        <th ng-if="isPortuguese" scope="col" class="head-right">{{pageItems.description.ptLabel}}</th>
+                        <th ng-if="isEnglish" scope="col" class="head-right">{{pageItems.description.enLabel}}</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" class="foot">
+                            <em ng-if="isPortuguese">{{pageItems.warning.ptLabel}}</em>
+                            <em ng-if="isEnglish">{{pageItems.warning.enLabel}}</em>
+                        </td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr ng-repeat="item in agendaItemsDay1" class="body-row">
+                        <td class="col-a">{{item.hours}}</td>
+                        <td class="col-b" ng-if="isPortuguese" ng-bind-html="item.ptLabel"></td>
+                        <td class="col-b" ng-if="isEnglish" ng-bind-html="item.enLabel"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th ng-if="isPortuguese" scope="col" class="head-left">{{pageItems.day2.ptLabel}}</th>
+                        <th ng-if="isEnglish" scope="col" class="head-left">{{pageItems.day2.enLabel}}</th>
+
+                        <th ng-if="isPortuguese" scope="col" class="head-right">{{pageItems.description.ptLabel}}</th>
+                        <th ng-if="isEnglish" scope="col" class="head-right">{{pageItems.description.enLabel}}</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" class="foot">
+                            <em ng-if="isPortuguese">{{pageItems.warning.ptLabel}}</em>
+                            <em ng-if="isEnglish">{{pageItems.warning.enLabel}}</em>
+                        </td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr ng-repeat="item in agendaItemsDay2" class="body-row">
+                        <td class="col-a">{{item.hours}}</td>
+                        <td class="col-b" ng-if="isPortuguese" ng-bind-html="item.ptLabel"></td>
+                        <td class="col-b" ng-if="isEnglish" ng-bind-html="item.enLabel"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
     </main>
 
     <footer></footer>
 </div>
+
+
+
+
