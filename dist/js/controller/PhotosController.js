@@ -1,1 +1,1 @@
-app.controller("PhotosController",["$scope","AppEventManager",function(o,e){e.tellMenuNewSectionLoaded("photos")}]);
+app.controller("PhotosController",["$scope","AppEventManager",function(e,o){o.tellMenuNewSectionLoaded("photos"),e.pageItems={title:{ptLabel:"Fotos",enLabel:"Photos"}}}]);

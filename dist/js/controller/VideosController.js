@@ -1,1 +1,1 @@
-app.controller("VideosController",["$scope","AppEventManager",function(e,o){o.tellMenuNewSectionLoaded("videos")}]);
+app.controller("VideosController",["$scope","AppEventManager",function(e,o){o.tellMenuNewSectionLoaded("videos"),e.pageItems={title:{ptLabel:"Vídeos",enLabel:"Videos"}}}]);

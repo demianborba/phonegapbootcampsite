@@ -1,1 +1,1 @@
-app.controller("TalktousController",["$scope","AppEventManager",function(e,o){o.tellMenuNewSectionLoaded("talktous")}]);
+app.controller("TalktousController",["$scope","AppEventManager",function(e,o){o.tellMenuNewSectionLoaded("talktous"),e.pageItems={title:{ptLabel:"Fale<br>conosco",enLabel:"Talk<br>to us"}}}]);

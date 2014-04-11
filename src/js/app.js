@@ -3,7 +3,7 @@ window.onload = function () {
     FastClick.attach(document.body);
 };
 
-var app = angular.module('app', ['ngRoute', 'ngAnimate']);
+var app = angular.module('app', ['ngRoute', 'ngAnimate', 'ngSanitize']);
 
 // using [] to protect the $scope and logic to avoid getting broken after minification using uglify
 app.controller('AppController', ['$scope', '$rootScope',
@@ -14,15 +14,6 @@ app.controller('AppController', ['$scope', '$rootScope',
         rootScope.labelToolbar = document.getElementById('label-toolbar');
         rootScope.content = document.getElementById('content');
         rootScope.mainMenu = document.getElementById('list-menu-left');
-
-        // defining the language
-        rootScope.languageSelectorItems = {
-                "ptCaption": "Língua",
-                "enCaption": "Language",
-                "ptButtonLabel": "Português",
-                "enButtonLabel": "English"
-            };
-
 
         rootScope.setLanguage = function (value) {
             if (value === 'en') {
@@ -68,7 +59,7 @@ app.controller('AppController', ['$scope', '$rootScope',
 
         // adjust Y position of mainMenu to facilitate tap using thumb
         scope.resetYpositionMainMenu = function () {
-            rootScope.mainMenu.style.paddingTop = window.innerHeight / 3 + 'px';
+            rootScope.mainMenu.style.paddingTop = window.innerHeight / 6 + 'px';
         };
 
         scope.resetYpositionMainMenu();

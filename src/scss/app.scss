@@ -58,6 +58,7 @@ body {
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    -o-user-select: none;
     user-select: none;
     
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -185,23 +186,29 @@ ng-view {
 }
 .ng-enter {
     -webkit-animation: enter .2s ease-in;
+    -moz-animation: enter .2s ease-in;
+    -ms-animation: enter .2s ease-in;
+    -o-animation: enter .2s ease-in;
     animation: enter .2s ease-in;
 }
 
 .ng-leave {
   
 }
-
 @-webkit-keyframes enter {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    0%,50% {opacity: 0;} 100% {opacity: 1;}
+}
+@-moz-keyframes enter {
+    0%,50% {opacity: 0;} 100% {opacity: 1;}
+}
+@-ms-keyframes enter {
+    0%,50% {opacity: 0;} 100% {opacity: 1;}
+}
+@-o-keyframes enter {
+    0%,50% {opacity: 0;} 100% {opacity: 1;}
+}
+@keyframes enter {
+    0%,50% {opacity: 0;} 100% {opacity: 1;}
 }
 
 // language selectors
@@ -220,6 +227,9 @@ ng-view {
     padding: 8px 10px 8px 10px;
     margin-right: 10px;
     border: 1px solid $main-menu-selected-color;
+    -moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
 }
 #language-selectors span:hover {
     color: $main-font-color;
@@ -288,7 +298,7 @@ ng-view {
     margin: 0;
 }
 .innerpage h1, #scrollable-content-area h1 {
-    font-size: 40px;
+    font-size: 35px;
     line-height: .8;
     letter-spacing: -2px; 
     padding:5px 20px 0 10px;

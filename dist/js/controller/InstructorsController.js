@@ -1,1 +1,1 @@
-app.controller("InstructorsController",["$scope","AppEventManager",function(e,n){n.tellMenuNewSectionLoaded("instructors")}]);
+app.controller("InstructorsController",["$scope","AppEventManager",function(t,e){e.tellMenuNewSectionLoaded("instructors"),t.pageItems={title:{ptLabel:"Instrutores",enLabel:"Instructors"}}}]);

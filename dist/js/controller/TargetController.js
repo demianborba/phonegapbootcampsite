@@ -1,1 +1,1 @@
-app.controller("TargetController",["$scope","AppEventManager",function(e,t){t.tellMenuNewSectionLoaded("target")}]);
+app.controller("TargetController",["$scope","AppEventManager",function(e,t){t.tellMenuNewSectionLoaded("target"),e.pageItems={title:{ptLabel:"Público<br>Alvo",enLabel:"Target<br>Audience"}}}]);

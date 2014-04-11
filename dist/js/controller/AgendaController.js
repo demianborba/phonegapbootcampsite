@@ -1,1 +1,1 @@
-app.controller("AgendaController",["$scope","AppEventManager",function(e,n){n.tellMenuNewSectionLoaded("agenda")}]);
+app.controller("AgendaController",["$scope","AppEventManager",function(e,n){n.tellMenuNewSectionLoaded("agenda"),e.pageItems={title:{ptLabel:"Agenda",enLabel:"Agenda"}}}]);

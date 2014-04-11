@@ -1,1 +1,1 @@
-app.controller("DurationController",["$scope","AppEventManager",function(e,n){n.tellMenuNewSectionLoaded("duration")}]);
+app.controller("DurationController",["$scope","AppEventManager",function(o,e){e.tellMenuNewSectionLoaded("duration"),o.pageItems={title:{ptLabel:"Duração do<br>PhoneGap<br>Bootcamp",enLabel:"PhoneGap<br>Bootcamp<br>Duration"}}}]);

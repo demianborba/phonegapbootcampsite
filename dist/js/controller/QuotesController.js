@@ -1,1 +1,1 @@
-app.controller("QuotesController",["$scope","AppEventManager",function(e,o){o.tellMenuNewSectionLoaded("quotes")}]);
+app.controller("QuotesController",["$scope","AppEventManager",function(e,t){t.tellMenuNewSectionLoaded("quotes"),e.pageItems={title:{ptLabel:"Depoimentos",enLabel:"Quotes"}}}]);

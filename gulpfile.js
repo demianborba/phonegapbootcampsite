@@ -34,7 +34,8 @@ gulp.task('html', function () {
 gulp.task('partials', function () {
 
     gulp.src('src/partials/**')
-        .pipe(gulp.dest('dist/partials/'));
+        .pipe(gulp.dest('dist/partials/'))
+        .pipe(notify('partial created in /dist/partials'));
 });
 
 gulp.task('images', function () {

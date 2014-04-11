@@ -1,35 +1,34 @@
 <div class="innerpage">
     <header>
-        <h1>Sobre o
-            <br>PhoneGap
-            <br>Bootcamp</h1>
+        <h1 ng-if="isPortuguese" ng-bind-html="pageItems.title.ptLabel"></ng-bind-html></h1>
+        <h1 ng-if="isEnglish" ng-bind-html="pageItems.title.enLabel"></ng-bind-html></h1>
     </header>
 
     <main>
         <img class="header-image" src="images/about-header.jpg" alt="">
-        <p class="highlight">São 2 dias de treinamento intenso sobre Apps Mobile usando Cordova para iOS, Android e BlackBerry 10, focando em Single Page Apps e Performance.</p>
-        <p>Vamos passar por todas as etapas de configuração das máquinas (Mac ou Windows), e vamos criar um aplicativo com:</p>
-        <ul>
-            <li>Informações sobre a conexão</li>
-            <li>Alertas Nativos</li>
-            <li>Informações sobre o Aparelho</li>
-            <li>Armazenamento Local</li>
-            <li>Mapas e Geolocalização</li>
-            <li>Acelerômetro</li>
-            <li>Contatos do Aparelho</li>
-            <li>Navegador dentro do App</li>
-            <li>Fotos</li>
-            <li>Dados usando a Cloud (com
-                <a href="http://parse.com">Parse.com</a>)</li>
-        </ul>
+        
+        <p ng-if="isPortuguese" class="highlight">{{pageItems.description.ptLabel}}</p>
+        <p ng-if="isEnglish" class="highlight">{{pageItems.description.enLabel}}</p>
+        
+        <p ng-if="isPortuguese">{{pageItems.listTitle.ptLabel}}</p>
+        <p ng-if="isEnglish">{{pageItems.listTitle.enLabel}}</p>
+        
+        <ul ng-if="isPortuguese" ng-bind-html="pageItems.listItems.ptLabel"></ul>
+        <ul ng-if="isEnglish" ng-bind-html="pageItems.listItems.enLabel"></ul>
+        
         <img class="header-image" src="images/about-device.jpg" alt="">
-        <p class="highlight">Vamos empacotar, instalar e debugar cada aplicativo em um device BlackBerry 10.</p>
+        
+        <p ng-if="isPortuguese" class="highlight">{{pageItems.description2.ptLabel}}</p>
+        <p ng-if="isEnglish" class="highlight">{{pageItems.description2.enLabel}}</p>
     </main>
 
     <footer>
         <section class="buttons">
-            <button type="button" ng-click="">Quer o Bootcamp em sua cidade?</button>
-            <button type="button" ng-click="gotoFacebook()">Visite nossa Página no Facebook</button>
+            <button ng-if="isPortuguese" type="button" ng-click="gotoContactPage()">{{pageItems.button1.ptLabel}}</button>
+            <button ng-if="isEnglish" type="button" ng-click="gotoContactPage()">{{pageItems.button1.enLabel}}</button>
+            
+            <button ng-if="isPortuguese" type="button" ng-click="gotoFacebook()">{{pageItems.button2.ptLabel}}</button>
+            <button ng-if="isEnglish" type="button" ng-click="gotoFacebook()">{{pageItems.button2.enLabel}}</button>
         </section>
     </footer>
 </div>
