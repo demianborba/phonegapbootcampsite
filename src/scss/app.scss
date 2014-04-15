@@ -7,6 +7,8 @@ $main-font-location: '../fonts/Roboto/Roboto-Light.ttf';
 $font-icons-name: 'Glyphicons Halflings';
 $font-icons-location: '../fonts/Glyph/glyphicons-halflings-regular';
 $toolbar-height: 50px;
+$p-font-size: 13px;
+$p-font-color: #605f5f;
 
 // media querie : mobile
 @media (max-width: 1024px) {
@@ -178,6 +180,21 @@ textarea {
 .disable-content-scrolling {
     pointer-events: none;
 }
+@-webkit-keyframes exit {
+    0% {opacity: 1;} 100% {opacity: 0;}
+}
+@-moz-keyframes exit {
+    0% {opacity: 1;} 100% {opacity: 0;}
+}
+@-ms-keyframes exit {
+    0% {opacity: 1;} 100% {opacity: 0;}
+}
+@-o-keyframes exit {
+    0% {opacity: 1;} 100% {opacity: 0;}
+}
+@keyframes exit {
+    0% {opacity: 1;} 100% {opacity: 0;}
+}
 
 // angular animations
 ng-view {
@@ -308,12 +325,12 @@ ng-view {
     color: $main-app-color;
 }
 .innerpage p {
-    font-size: 13px;
+    font-size: $p-font-size;
     color: #6c6b6b;
     padding: 5px 25px 0 25px;
 }
 .innerpage li {
-    font-size: 13px;
+    font-size: $p-font-size;
     color: #6c6b6b;
     padding: 0;
     margin-top: 0;
@@ -354,7 +371,7 @@ ng-view {
 	-webkit-border-radius:5px;
 	border-radius:5px;
     border: 0;
-	color:#ffffff;
+	color: $main-font-color;
 	padding: 20px;
 	text-decoration:none;
     width: 100%;
@@ -365,61 +382,59 @@ ng-view {
 	background-color: $main-menu-selected-color;
 }
 // inner page tables
-.innerpage #table-container {
-    margin: -10px;
-}
-.innerpage table {
-    font-size: 10px;
+.innerpage .table {
     width: 100%;
     text-align: left;
-    color: #6c6b6b;
-    border-spacing: 0;
-    margin-bottom: 20px;
+    color: $p-font-color;
+    font-size: $p-font-size;
+    float: left;
+    padding-bottom: 20px;
+    line-height: 1.5;
 }
-.innerpage table tr:nth-child(odd) {
+.innerpage .table li {
+    color: $p-font-color;
+}
+.innerpage .table ul {
+    margin: 10px 0;
+}
+.innerpage .table-header {
+    width: 100%;
+    background-color: $main-app-color;
+    color: $main-font-color;
+    text-transform: uppercase;
+    padding: 30px 15px 45px 0;
+    text-align: center;
+}
+.innerpage .table-row {
+    position: relative;
+    width: 100%;
+    float:left;
+    padding: 30px 15px 30px 0;
+}
+.innerpage .table-row:nth-child(odd) {
     background-color: #ccc;    
 }
-.innerpage table tr:nth-child(even) {
+.innerpage .table-row:nth-child(even) {
     background-color: #e0dfdf;
 }
-.innerpage th {
-    background-color: $main-app-color;
+.innerpage .table-left {
+    position: relative;
+    width: 25%;
+    float: left;
     text-align: center;
-    padding: 10px;
-    color: $main-font-color;
-    height: 50px;
-    font-size: 13px;
 }
-.innerpage .head-left {
-    width: 80px;
-    text-transform:uppercase;
-}
-.innerpage .head-right {
-    text-transform:uppercase;
-}
-.innerpage .col-a {
-    text-align: center;
-    font-size: 10px;
-    vertical-align: middle;
-    color: #5a5959;
+.innerpage .table-right {
+    position: relative;
+    float:left;
+    width: 65%;
     padding-left: 10px;
+    font-size: $p-font-size;
 }
-.innerpage .col-b {
-    font-size: 10px;
-    vertical-align: middle;
-    line-height: 1.5;
-    padding: 20px 30px 20px 10px;
-}
-.innerpage .col-b li {
-    font-size: 10px;
-}
-.innerpage .col-b ul {
-    margin-bottom: 0;
-    padding-left: 0;
-    margin-left: 20px;
-}
-.innerpage .foot {
+.innerpage .table-footer {
+    position: relative;
+    width: 100%;
+    float:left;
     background-color: #b2b0b0;
-    color: #605f5f;
+    color: $p-font-color;
     padding: 20px;
 }
