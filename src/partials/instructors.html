@@ -1,11 +1,23 @@
 <div class="innerpage">
     <header>
-        <h1 ng-if="isPortuguese" ng-bind-html="pageItems.title.ptLabel"></ng-bind-html></h1>
-        <h1 ng-if="isEnglish" ng-bind-html="pageItems.title.enLabel"></ng-bind-html></h1>
+        <h1 ng-if="isPortuguese" ng-bind-html="pageItems.title.ptLabel">
+            </ng-bind-html>
+        </h1>
+        <h1 ng-if="isEnglish" ng-bind-html="pageItems.title.enLabel">
+            </ng-bind-html>
+        </h1>
     </header>
 
     <main>
-        <p>Em breve (Coming Soon).</p>
+
+        <div ng-repeat="instructor in pageItems.instructors">
+            <img class="header-image" src="{{instructor.picture}}" alt="">
+            <p class="highlight"><strong>{{instructor.name}}</strong><br>{{instructor.title}}</p>
+            <p ng-if="isPortuguese">{{instructor.bio.ptLabel}}</p>
+            <p ng-if="isEnglish">{{instructor.bio.enLabel}}</p>
+            <p>&nbsp;</p>
+        </div>
+
     </main>
 
     <footer></footer>

@@ -17,8 +17,8 @@ app.controller('AboutController', ['$scope', 'AppEventManager',
                             "enLabel": "We are going to cover all the steps to configure Mac and Windows machines, as well as create an app with:"
                             },
                 "listItems" : {
-                            "ptLabel": "<li>Informações sobre a conexão</li><li>Alertas Nativos</li><li>Informações sobre o Aparelho</li><li>Armazenamento Local</li><li>Mapas e Geolocalização</li><li>Acelerômetro</li><li>Contatos do Aparelho</li><li>Navegador dentro do App</li><li>Fotos</li><li>Dados usando a Cloud (com <a href='http://parse.com'>Parse.com</a>)</li>", 
-                            "enLabel": "<li>Connection</li><li>Native Alerts</li><li>Device Info</li><li>Local Storage</li><li>Maps and Geolocation</li><li>Accelerometer</li><li>Device Contacts</li><li>In App Browser</li><li>Photos</li><li>Data in the Cloud (using <a href='http://parse.com'>Parse.com</a>)</li>"
+                            "ptLabel": "<li>Informações sobre a conexão;</li><li>Alertas Nativos;</li><li>Informações sobre o Aparelho;</li><li>Armazenamento Local;</li><li>Mapas e Geolocalização;</li><li>Acelerômetro;</li><li>Contatos do Aparelho;</li><li>Navegador dentro do App;</li><li>Fotos;</li><li>Dados usando a Cloud (com <a href='http://parse.com'>Parse.com</a>).</li>", 
+                            "enLabel": "<li>Connection;</li><li>Native Alerts;</li><li>Device Info;</li><li>Local Storage;</li><li>Maps and Geolocation;</li><li>Accelerometer;</li><li>Device Contacts;</li><li>In App Browser;</li><li>Photos;</li><li>Data in the Cloud (using <a href='http://parse.com'>Parse.com</a>).</li>"
                             },
                 "description2" : {
                             "ptLabel": "Vamos empacotar, instalar e debugar cada aplicativo em um device BlackBerry 10.", 
