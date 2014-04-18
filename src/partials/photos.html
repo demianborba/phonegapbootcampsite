@@ -5,7 +5,12 @@
     </header>
 
     <main>
-        <p>Em breve (Coming Soon).</p>
+         
+         <div ng-repeat="photo in pageItems.photos">
+            <img class="header-image" src="{{photo.location}}" alt="">
+            <p></p>
+        </div>
+    
     </main>
 
     <footer></footer>
