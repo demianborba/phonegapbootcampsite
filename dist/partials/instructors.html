@@ -11,7 +11,7 @@
     <main>
 
         <div ng-repeat="instructor in pageItems.instructors">
-            <img class="header-image" src="{{instructor.picture}}" alt="">
+            <img class="header-image" ng-src="{{instructor.picture}}" alt="">
             <p class="highlight"><strong>{{instructor.name}}</strong><br>{{instructor.title}}</p>
             <p ng-if="isPortuguese">{{instructor.bio.ptLabel}}</p>
             <p ng-if="isEnglish">{{instructor.bio.enLabel}}</p>

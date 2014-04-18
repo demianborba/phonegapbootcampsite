@@ -7,6 +7,13 @@ app.controller('VideosController', ['$scope','AppEventManager',
                 "title": {                
                             "ptLabel": "Vídeos",
                             "enLabel": "Videos"
+                            },
+                "videos": [
+                           {
+                            "posterLocation": "videos/bootcamp.jpg",
+                            "webmLocation": "videos/bootcamp.webm",
+                            "mp4Location": "videos/bootcamp.mp4"
                             }
+                           ]
                 };
 }]);

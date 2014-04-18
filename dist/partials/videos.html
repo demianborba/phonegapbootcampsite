@@ -1,11 +1,20 @@
 <div class="innerpage">
     <header>
-        <h1 ng-if="isPortuguese" ng-bind-html="pageItems.title.ptLabel"></ng-bind-html></h1>
-        <h1 ng-if="isEnglish" ng-bind-html="pageItems.title.enLabel"></ng-bind-html></h1>
+        <h1 ng-if="isPortuguese" ng-bind-html="pageItems.title.ptLabel">
+            </ng-bind-html>
+        </h1>
+        <h1 ng-if="isEnglish" ng-bind-html="pageItems.title.enLabel">
+            </ng-bind-html>
+        </h1>
     </header>
 
     <main>
-        <p>Em breve (Coming Soon).</p>
+        <div ng-repeat="video in pageItems.videos">
+            <video controls poster="{{video.posterLocation}}">
+                <source ng-src="{{video.webmLocation}}" type='video/webm;codecs="vp8, vorbis"' />
+                <source ng-src="{{video.mp4Location}}" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+            </video>
+        </div>
     </main>
 
     <footer></footer>
