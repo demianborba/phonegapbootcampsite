@@ -39,7 +39,7 @@ app.controller('AboutController', ['$scope', 'AppEventManager',
         }
         
         scope.gotoFacebook = function () {
-            window.location.href = 'http://www.facebook.com/phonegapbootcamp';
+            window.open('http://www.facebook.com/phonegapbootcamp','_blank');
         };
         
 }]);
