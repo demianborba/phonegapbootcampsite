@@ -10,7 +10,7 @@ $toolbar-height: 50px;
 $p-font-size: 13px;
 $p-font-color: #797878;
 
-// media querie : mobile
+// media query : mobile
 @media (max-width: 1024px) {
     .snap-drawer-left li:hover {}
     .snap-drawer-left li {}
@@ -22,7 +22,7 @@ $p-font-color: #797878;
     }
 }
 
-// media querie : desktop
+// media query : desktop
 @media (min-width: 1024px) {
     .snap-drawer-left li:hover {
         background-color: $main-menu-selected-color
