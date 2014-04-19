@@ -5,7 +5,12 @@
     </header>
 
     <main>
-        <p>Em breve (Coming Soon).</p>
+        
+        <p ng-if="isPortuguese" ng-bind-html="pageItems.description.ptLabel"></p>
+        <p ng-if="isEnglish" ng-bind-html="pageItems.description.enLabel"></p>
+        <br>
+        <img class="header-image" src="images/gallery/1-room.jpg" alt="">
+        
     </main>
 
     <footer></footer>

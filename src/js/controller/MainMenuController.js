@@ -2,15 +2,15 @@ app.controller('MainMenuController', ['$scope', '$http', '$element', 'AppEventMa
     function (scope, http, element, AppEventManager) {
         // defining the language
         scope.languageSelectorItems = {
-                "caption": {                
-                            "ptLabel": "Língua",
-                            "enLabel": "Language"
-                            },
-                "button": {
-                            "ptLabel": "Português",
-                            "enLabel": "English"
-                            }
-                };
+            "caption": {
+                "ptLabel": "Língua",
+                "enLabel": "Language"
+            },
+            "button": {
+                "ptLabel": "Português",
+                "enLabel": "English"
+            }
+        };
         scope.mainMenuItems = [
             {
                 "ptLabel": "Sobre o Bootcamp",
@@ -85,9 +85,9 @@ app.controller('MainMenuController', ['$scope', '$http', '$element', 'AppEventMa
                 "clickRoute": "talktous"
             }
         ];
-        
-        scope.$on('NewSectionLoaded', function(event, args){
-            
+
+        scope.$on('NewSectionLoaded', function (event, args) {
+
             // unselect all menus
             var menuItems = document.getElementById('menuItems');
             for (i = 0; i < menuItems.childNodes.length; i++) {
@@ -96,10 +96,10 @@ app.controller('MainMenuController', ['$scope', '$http', '$element', 'AppEventMa
                     item.classList.remove('menu-item-selected');
                 }
             }
-            
+
             // select item
             document.getElementById(args).classList.add('menu-item-selected');
-            
+
         });
 
         scope.gotoSection = function (routeToGo) {
