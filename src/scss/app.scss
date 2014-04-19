@@ -295,9 +295,6 @@ ng-view {
 .glyphicon-target:before {
     content: "\e165";
 }
-.glyphicon-dateslocations:before {
-    content: "\e109";
-}
 .glyphicon-videos:before {
     content: "\e009";
 }
@@ -458,7 +455,25 @@ ng-view {
     position: absolute;
     color: $main-app-color;
     font-size: 50px;
-    padding-left: 90%;
     margin-top: -10px;
     text-align: right;
+    right:30px;
+}
+.innerpage .registration-page {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.innerpage .registration-page h2 {
+    font-size: 25px;
+    line-height: 1;
+    letter-spacing: -1px; 
+    padding:0 20px 0 20px;
+    text-transform:uppercase;
+    color: $main-app-color;
+    margin-bottom: 0;
+    text-align: left;
+}
+.innerpage .registration-page p {
+    margin-bottom: 0;
+    text-align: left;
 }

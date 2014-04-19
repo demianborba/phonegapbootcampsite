@@ -61,12 +61,6 @@ app.controller('MainMenuController', ['$scope', '$http', '$element', 'AppEventMa
                 "clickRoute": "target"
             },
             {
-                "ptLabel": "Datas e Locais",
-                "enLabel": "Dates and Locations",
-                "icon": "glyphicon-dateslocations",
-                "clickRoute": "dateslocations"
-            },
-            {
                 "ptLabel": "Vídeos",
                 "enLabel": "Videos",
                 "icon": "glyphicon-videos",

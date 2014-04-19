@@ -116,10 +116,6 @@ app.config(['$routeProvider',
             templateUrl: 'partials/target.html',
             controller: 'TargetController'
         }).
-        when('/dateslocations', {
-            templateUrl: 'partials/dateslocations.html',
-            controller: 'DatesLocationsController'
-        }).
         when('/videos', {
             templateUrl: 'partials/videos.html',
             controller: 'VideosController'
