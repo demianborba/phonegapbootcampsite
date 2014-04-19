@@ -51,6 +51,14 @@ app.controller('RegistrationController', ['$scope', 'AppEventManager',
                     "enDates": "18 & 19 / August / 2014",
                     "name": "PhoneGap<br>Bootcamp<br>João Pessoa",
                     "url": "http://www.jornadaadobe.com"
+                },
+                {
+                    "city": "San Francisco - California - USA",
+                    "address": "HTML5 Dev Conf",
+                    "ptDates": "Segundo semestre de 2014",
+                    "enDates": "Fall 2014",
+                    "name": "PhoneGap<br>Bootcamp<br>San Francisco",
+                    "url": "http://html5devconf.com/"
             }]
         };
         

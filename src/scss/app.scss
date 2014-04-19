@@ -16,6 +16,10 @@ $p-font-color: #797878;
     .snap-drawer-left li {}
     #wrapper {}
     #mobilephones {}
+    // fork me on github
+    .github-link {
+        display: none;
+    }
 }
 
 // media querie : desktop
@@ -47,6 +51,13 @@ $p-font-color: #797878;
         margin-top: 110px;
         margin-left: 432px;
         overflow: hidden;
+    }
+    // fork me on github
+    .github-link {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 11;
     }
 }
 
