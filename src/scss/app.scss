@@ -327,7 +327,7 @@ ng-view {
 .innerpage p {
     font-size: $p-font-size;
     color: $p-font-color;
-    padding: 5px 25px 0 25px;
+    padding: 0 20px 0 20px;
 }
 .innerpage li {
     font-size: $p-font-size;
@@ -350,6 +350,7 @@ ng-view {
     padding: 25px;
     margin-top: 0;
     margin-bottom: 20px;
+    text-align: center;
 }
 .innerpage img {
     width: 100%;
