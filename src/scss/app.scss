@@ -8,7 +8,7 @@ $font-icons-name: 'Glyphicons Halflings';
 $font-icons-location: '../fonts/Glyph/glyphicons-halflings-regular';
 $toolbar-height: 50px;
 $p-font-size: 13px;
-$p-font-color: #605f5f;
+$p-font-color: #797878;
 
 // media querie : mobile
 @media (max-width: 1024px) {
@@ -326,12 +326,12 @@ ng-view {
 }
 .innerpage p {
     font-size: $p-font-size;
-    color: #6c6b6b;
+    color: $p-font-color;
     padding: 5px 25px 0 25px;
 }
 .innerpage li {
     font-size: $p-font-size;
-    color: #6c6b6b;
+    color: $p-font-color;
     padding: 0;
     margin-top: 0;
     margin-bottom: 3px;
@@ -346,7 +346,7 @@ ng-view {
 }
 .innerpage .highlight {
     background-color: #cbcbcb;
-    color: #6c6b6b;
+    color: $p-font-color;
     padding: 25px;
     margin-top: 0;
     margin-bottom: 20px;
@@ -440,4 +440,24 @@ ng-view {
 }
 .innerpage video {
     width: 100%;
+}
+.innerpage .quotes {
+    font-size: $p-font-size;
+    color: $p-font-color;
+    text-align: center;
+}
+.innerpage .quote-open {
+    position: absolute;
+    color: $main-app-color;
+    font-size: 50px;
+    margin: -30px 0;
+    padding: 10px;
+}
+.innerpage .quote-close {
+    position: absolute;
+    color: $main-app-color;
+    font-size: 50px;
+    padding-left: 90%;
+    margin-top: -10px;
+    text-align: right;
 }
