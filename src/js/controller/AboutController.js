@@ -8,6 +8,14 @@ app.controller('AboutController', ['$scope', 'AppEventManager',
                 "ptLabel": "Sobre o<br>PhoneGap<br>Bootcamp",
                 "enLabel": "About<br>PhoneGap<br>Bootcamp"
             },
+            "nextCitiesMessage": {
+                "ptLabel": "Inscrições abertas para as próximas turmas do PhoneGap Bootcamp nas cidades de Belo Horizonte, Maceió, João Pessoa e Aracaju:",
+                "enLabel": "Registration open for the next PhoneGap Bootcamp classes in Belo Horizonte, Maceio, Joao Pessoa and Aracaju:"
+            },
+            "button1": {
+                "ptLabel": "Inscreva-se já",
+                "enLabel": "Register Now"
+            },
             "description": {
                 "ptLabel": "São 2 dias de treinamento intenso sobre Apps Mobile usando Cordova para iOS, Android e BlackBerry 10, focando em Single Page Apps e Performance.",
                 "enLabel": "2 days of intense training coverting Mobile Apps using Cordova for iOS, Android and BlackBerry 10, focusing on Single Page Apps and Performance."
@@ -24,16 +32,20 @@ app.controller('AboutController', ['$scope', 'AppEventManager',
                 "ptLabel": "Vamos empacotar, instalar e debugar cada aplicativo em um device BlackBerry 10.",
                 "enLabel": "We are going to package, install and debug each application using a BlackBerry 10 device."
             },
-            "button1": {
+            "button2": {
                 "ptLabel": "Quer o Bootcamp em sua cidade?",
                 "enLabel": "Want the Bootcamp in your city?"
             },
-            "button2": {
+            "button3": {
                 "ptLabel": "Visite nossa página no Facebook",
                 "enLabel": "Visit our page on Facebook"
             }
         };
 
+        scope.gotoRegisterPage = function () {
+            window.location.href = '#/registration';
+        }
+        
         scope.gotoContactPage = function () {
             window.location.href = '#/talktous';
         }

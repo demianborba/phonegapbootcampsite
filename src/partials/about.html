@@ -6,6 +6,15 @@
     </header>
 
     <main>
+        
+        <p ng-if="isPortuguese">{{pageItems.nextCitiesMessage.ptLabel}}</p>
+        <p ng-if="isEnglish">{{pageItems.nextCitiesMessage.enLabel}}</p>
+        
+        <section class="buttons">
+            <button ng-if="isPortuguese" type="button" ng-click="gotoRegisterPage()">{{pageItems.button1.ptLabel}}</button>
+            <button ng-if="isEnglish" type="button" ng-click="gotoRegisterPage()">{{pageItems.button1.enLabel}}</button>    
+        </section>
+        
         <img class="header-image" src="images/about-header.jpg" alt="">
         
         <p ng-if="isPortuguese" class="highlight">{{pageItems.description.ptLabel}}</p>
@@ -25,11 +34,11 @@
 
     <footer>
         <section class="buttons">
-            <button ng-if="isPortuguese" type="button" ng-click="gotoContactPage()">{{pageItems.button1.ptLabel}}</button>
-            <button ng-if="isEnglish" type="button" ng-click="gotoContactPage()">{{pageItems.button1.enLabel}}</button>
+            <button ng-if="isPortuguese" type="button" ng-click="gotoContactPage()">{{pageItems.button2.ptLabel}}</button>
+            <button ng-if="isEnglish" type="button" ng-click="gotoContactPage()">{{pageItems.button2.enLabel}}</button>
             
-            <button ng-if="isPortuguese" type="button" ng-click="gotoFacebook()">{{pageItems.button2.ptLabel}}</button>
-            <button ng-if="isEnglish" type="button" ng-click="gotoFacebook()">{{pageItems.button2.enLabel}}</button>
+            <button ng-if="isPortuguese" type="button" ng-click="gotoFacebook()">{{pageItems.button3.ptLabel}}</button>
+            <button ng-if="isEnglish" type="button" ng-click="gotoFacebook()">{{pageItems.button3.enLabel}}</button>
         </section>
     </footer>
 </div>
