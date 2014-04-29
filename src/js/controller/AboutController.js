@@ -18,7 +18,7 @@ app.controller('AboutController', ['$scope', 'AppEventManager',
             },
             "description": {
                 "ptLabel": "São 2 dias de treinamento intenso sobre Apps Mobile usando Cordova para iOS, Android e BlackBerry 10, focando em Single Page Apps e Performance.",
-                "enLabel": "2 days of intense training coverting Mobile Apps using Cordova for iOS, Android and BlackBerry 10, focusing on Single Page Apps and Performance."
+                "enLabel": "2 days of intense training covering Mobile Apps using Cordova for iOS, Android and BlackBerry 10, focusing on Single Page Apps and Performance."
             },
             "listTitle": {
                 "ptLabel": "Vamos passar por todas as etapas de configuração das máquinas (Mac ou Windows), e vamos criar um aplicativo com:",
