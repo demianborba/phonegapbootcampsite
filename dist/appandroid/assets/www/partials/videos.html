@@ -1,0 +1,21 @@
+<div class="innerpage">
+    <header>
+        <h1 ng-if="isPortuguese" ng-bind-html="pageItems.title.ptLabel">
+            </ng-bind-html>
+        </h1>
+        <h1 ng-if="isEnglish" ng-bind-html="pageItems.title.enLabel">
+            </ng-bind-html>
+        </h1>
+    </header>
+
+    <main>
+
+        <video controls poster="videos/bootcamp.jpg" webkit-playsinline>
+            <source ng-src="{{pageItems.video1.webmLocation}}" type='video/webm;codecs="vp8, vorbis"' />
+            <source ng-src="{{pageItems.video1.mp4Location}}" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+        </video>
+
+    </main>
+
+    <footer></footer>
+</div>

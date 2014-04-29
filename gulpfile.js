@@ -23,6 +23,7 @@ gulp.task('sass', function () {
         .pipe(minifyCSS())
         .pipe(gulp.dest('dist/website/css/'))
         .pipe(gulp.dest('dist/appblackberry10/www/css/'))
+        .pipe(gulp.dest('dist/appandroid/assets/www/css/'))
         .pipe(notify("sass finished and css created in /dist"));
 });
 
@@ -30,6 +31,7 @@ gulp.task('html', function () {
 
     gulp.src('src/*.html')
         .pipe(gulp.dest('dist/website/'))
+        .pipe(gulp.dest('dist/appandroid/assets/www/'))
         .pipe(gulp.dest('dist/appblackberry10/www/'));
 });
 
@@ -37,6 +39,7 @@ gulp.task('partials', function () {
 
     gulp.src('src/partials/**')
         .pipe(gulp.dest('dist/website/partials/'))
+        .pipe(gulp.dest('dist/appandroid/assets/www/partials/'))
         .pipe(gulp.dest('dist/appblackberry10/www/partials/'));
 });
 
@@ -44,6 +47,7 @@ gulp.task('images', function () {
 
     gulp.src('src/images/**')
         .pipe(gulp.dest('dist/website/images/'))
+        .pipe(gulp.dest('dist/appandroid/assets/www/images/'))
         .pipe(gulp.dest('dist/appblackberry10/www/images/'));
 });
 
@@ -51,9 +55,11 @@ gulp.task('videos', function () {
 
     gulp.src('src/videos/bootcamp.jpg')
         .pipe(gulp.dest('dist/website/videos/'))
+        .pipe(gulp.dest('dist/appandroid/assets/www/videos/'))
         .pipe(gulp.dest('dist/appblackberry10/www/videos/'));
     gulp.src('src/videos/bootcamp.mp4')
         .pipe(gulp.dest('dist/website/videos/'))
+        .pipe(gulp.dest('dist/appandroid/assets/www/videos/'))
         .pipe(gulp.dest('dist/appblackberry10/www/videos/'));
     gulp.src('src/videos/bootcamp.webm')
         .pipe(gulp.dest('dist/website/videos/'));
@@ -63,6 +69,7 @@ gulp.task('fonts', function () {
 
     gulp.src('src/fonts/**')
         .pipe(gulp.dest('dist/website/fonts/'))
+        .pipe(gulp.dest('dist/appandroid/assets/www/fonts/'))
         .pipe(gulp.dest('dist/appblackberry10/www/fonts/'));
 });
 
@@ -71,24 +78,29 @@ gulp.task('bower_components', function () {
     gulp.src('src/bower_components/snapjs/snap.js')
         .pipe(uglify())
         .pipe(gulp.dest('dist/website/bower_components/snapjs/'))
+        .pipe(gulp.dest('dist/appandroid/assets/www/bower_components/snapjs/'))
         .pipe(gulp.dest('dist/appblackberry10/www/bower_components/snapjs/'));
 
     gulp.src('src/bower_components/snapjs/snap.css')
         .pipe(minifyCSS())
         .pipe(gulp.dest('dist/website/bower_components/snapjs/'))
+        .pipe(gulp.dest('dist/appandroid/assets/www/bower_components/snapjs/'))
         .pipe(gulp.dest('dist/appblackberry10/www/bower_components/snapjs/'));
 
     gulp.src('src/bower_components/fastclick/lib/fastclick.js')
         .pipe(uglify())
         .pipe(gulp.dest('dist/website/bower_components/fastclick/lib/'))
+        .pipe(gulp.dest('dist/appandroid/assets/www/bower_components/fastclick/lib/'))
         .pipe(gulp.dest('dist/appblackberry10/www/bower_components/fastclick/lib/'));
 
     gulp.src('src/bower_components/angular/angular.min.js')
         .pipe(gulp.dest('dist/website/bower_components/angular/'))
+        .pipe(gulp.dest('dist/appandroid/assets/www/bower_components/angular/'))
         .pipe(gulp.dest('dist/appblackberry10/www/bower_components/angular/'));
     
     gulp.src('src/bower_components/angular/angular.min.js.map')
         .pipe(gulp.dest('dist/website/bower_components/angular/'))
+        .pipe(gulp.dest('dist/appandroid/assets/www/bower_components/angular/'))
         .pipe(gulp.dest('dist/appblackberry10/www/bower_components/angular/'));
 });
 
@@ -97,6 +109,7 @@ gulp.task('scripts', function () {
     gulp.src('src/js/**')
         .pipe(uglify())
         .pipe(gulp.dest('dist/website/js/'))
+        .pipe(gulp.dest('dist/appandroid/assets/www/js/'))
         .pipe(gulp.dest('dist/appblackberry10/www/js/'))
         .pipe(notify("js minified and files sent to /dist"));
 });

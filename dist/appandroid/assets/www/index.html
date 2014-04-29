@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html ng-app="app">
+
+<head>
+    <title>PhoneGap Bootcamp</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <link rel="stylesheet" type="text/css" href="bower_components/snapjs/snap.css" />
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/snapjs/snap.js"></script>
+    <script type="text/javascript" src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script type="text/javascript" src="js/angularextras/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/angularextras/angular-animate.min.js"></script>
+    <script type="text/javascript" src="js/angularextras/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controller/MainMenuController.js"></script>
+    <script type="text/javascript" src="js/controller/AboutController.js"></script>
+    <script type="text/javascript" src="js/controller/AgendaController.js"></script>
+    <script type="text/javascript" src="js/controller/DurationController.js"></script>
+    <script type="text/javascript" src="js/controller/InstructorsController.js"></script>
+    <script type="text/javascript" src="js/controller/PhotosController.js"></script>
+    <script type="text/javascript" src="js/controller/PrerequisitsController.js"></script>
+    <script type="text/javascript" src="js/controller/QuotesController.js"></script>
+    <script type="text/javascript" src="js/controller/RegistrationController.js"></script>
+    <script type="text/javascript" src="js/controller/TalktousController.js"></script>
+    <script type="text/javascript" src="js/controller/TargetController.js"></script>
+    <script type="text/javascript" src="js/controller/VideosController.js"></script>
+</head>
+
+<body ng-controller="AppController">
+
+    <a href="https://github.com/demianborba/phonegapbootcampsite" class="github-link">
+        <img src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub">
+    </a>
+
+    <div id="smartphones-image-for-desktop">
+        <div id="wrapper">
+            <div class="snap-drawers">
+                <div class="snap-drawer snap-drawer-left">
+                    <div id="list-menu-left" ng-controller="MainMenuController">
+                        <span class="caption-language-selector" ng-if="isPortuguese">{{languageSelectorItems.caption.ptLabel}}:</span>
+                        <span class="caption-language-selector" ng-if="isEnglish">{{languageSelectorItems.caption.enLabel}}:</span>
+                        <div id="language-selectors">
+                            <span ng-class="{'selected':isPortuguese}" ng-click="setLanguage('pt')">{{languageSelectorItems.button.ptLabel}}</span>
+                            <span ng-class="{'selected':isEnglish}" ng-click="setLanguage('en')">{{languageSelectorItems.button.enLabel}}</span>
+                        </div>
+                        <ul id="menuItems">
+                            <li id="{{item.clickRoute}}" ng-repeat="item in mainMenuItems">
+                                <a ng-click="gotoSection(item.clickRoute)">
+                                    <span class="glyphicon {{item.icon}}"></span>
+                                    <p ng-if="isPortuguese">{{item.ptLabel}}</p>
+                                    <p ng-if="isEnglish">{{item.enLabel}}</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="snap-drawer snap-drawer-right"></div>
+            <div id="content" class="snap-content">
+                <div id="scrollable-content-area">
+                    <div ng-show="isRouting">
+                        <h1 ng-if="isPortuguese">Carregando</h1>
+                        <h1 ng-if="isEnglish">Loading</h1>
+                    </div>
+                    <div ng-show="!isRouting">
+                        <ng-view></ng-view>
+                    </div>
+                </div>
+                <div id="toolbar">
+                    <a ng-click="openSnapper()">
+                        <span class="glyphicon glyphicon-open-left"></span>
+                    </a>
+                    <h1 ng-click="openSnapper()" id="label-toolbar">Menu</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Google Analytics-->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');    
+          ga('create', 'UA-50165805-1', 'phonegapbootcamp.io');
+          ga('send', 'pageview');
+    </script>
+
+</body>
+
+</html>
