@@ -1,1 +1,0 @@
-app.controller("VideosController",["$scope","AppEventManager",function(o,e){e.tellMenuNewSectionLoaded("videos"),o.pageItems={title:{ptLabel:"Vídeos",enLabel:"Videos"},videos:[{posterLocation:"videos/bootcamp.jpg",webmLocation:"videos/bootcamp.webm",mp4Location:"videos/bootcamp.mp4"}]}}]);
