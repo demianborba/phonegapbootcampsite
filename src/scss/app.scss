@@ -345,6 +345,7 @@ ng-view {
 .innerpage a {
     color: $main-app-color;
     text-decoration: none;
+    cursor: pointer;
 }
 .innerpage .highlight {
     background-color: #cbcbcb;

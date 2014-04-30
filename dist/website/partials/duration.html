@@ -5,9 +5,8 @@
     </header>
 
     <main>
-        
-        <p ng-if="isPortuguese" ng-bind-html="pageItems.description.ptLabel"></p>
-        <p ng-if="isEnglish" ng-bind-html="pageItems.description.enLabel"></p>
+        <p ng-if="isPortuguese">{{pageItems.description.ptLabel}} <a ng-click="gotoAgendaPage()">{{pageItems.agendaLink.ptLabel}}</a>.</p>
+        <p ng-if="isEnglish">{{pageItems.description.enLabel}} <a ng-click="gotoAgendaPage()">{{pageItems.agendaLink.enLabel}}</a>.</p>
         <br>
         <img class="header-image" src="images/gallery/1-room.jpg" alt="">
         
