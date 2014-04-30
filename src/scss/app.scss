@@ -369,13 +369,13 @@ ng-view {
 }
 .innerpage button {
     background-color: $main-app-color;
-    font-size: 13px;
+    font-size: $p-font-size;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 	border-radius:5px;
     border: 0;
 	color: $main-font-color;
-	padding: 20px;
+	padding: 15px;
 	text-decoration:none;
     width: 100%;
     cursor: pointer;
