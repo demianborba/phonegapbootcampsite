@@ -160,7 +160,6 @@ textarea {
 .menu-item-selected {
     background-color: $main-menu-selected-color;
 }
-
 .snap-drawer-left ul {
     padding: 0;
     margin: 0;
@@ -170,9 +169,6 @@ textarea {
     font-size: $nav-font-size;
     color: $main-font-color;
     margin: 0 0 0 $toolbar-height;
-}
-.snap-drawer-left .glyphicon {
-    //margin-left: 0;
 }
 .snap-drawer-left li > a {
     text-decoration: none;
