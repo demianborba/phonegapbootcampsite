@@ -62,9 +62,30 @@ app.controller('AppController', ['$scope', '$rootScope',
             rootScope.mainMenu.style.paddingTop = window.innerHeight / 6 + 'px';
         };
 
+        // if media query is mobile, force height to be 100% - $toolbar-height (for older browsers)
+        scope.setScrollableAreaForMobile = function () {
+            rootScope.scrollableContent.style.height = (window.innerHeight - 50) + 'px';
+        };
+        scope.setScrollableAreaForDesktop = function () {
+            rootScope.scrollableContent.style.height = (532 - 50) + 'px';
+        };
+        scope.resetScrollableAreaHeight = function () {
+            var currentWindowWidth = window.innerWidth;
+            if (currentWindowWidth < 1024) {
+                scope.setScrollableAreaForMobile();
+            } else {
+                scope.setScrollableAreaForDesktop();
+            }
+        };
+        window.onresize = function () {
+            scope.resetScrollableAreaHeight();
+        };
+        scope.resetScrollableAreaHeight();
+
         scope.resetYpositionMainMenu();
         window.addEventListener('orientationchange', function () {
             scope.resetYpositionMainMenu();
+            scope.resetScrollableAreaHeight();
         }, false);
 }]);
 

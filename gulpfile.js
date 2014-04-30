@@ -117,7 +117,7 @@ gulp.task('scripts', function () {
 gulp.task('browser-sync', function () {
     browserSync.init(['dist/website/**'], {
         server: {
-            baseDir: 'dist'
+            baseDir: 'dist/website'
         }
     });
 });
@@ -125,7 +125,7 @@ gulp.task('browser-sync', function () {
 gulp.task('default', function () {
 
     gulp.run('sass', 'html', 'partials', 'images', 'videos', 'fonts', 'bower_components', 'lint', 'scripts');
-    // gulp.run('sass', 'html', 'partials', 'images', 'fonts', 'bower_components', 'lint', 'scripts', 'browser-sync');
+    // gulp.run('sass', 'html', 'partials', 'images', 'videos', 'fonts', 'bower_components', 'lint', 'scripts', 'browser-sync');
 
     gulp.watch('src/scss/*.scss', function () {
         gulp.run('sass');
