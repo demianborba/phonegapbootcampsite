@@ -24,7 +24,7 @@ app.controller('AppController', ['$scope', '$rootScope',
                 rootScope.isEnglish = false;
             }
         };
-        rootScope.setLanguage('en');
+        rootScope.setLanguage('pt');
 
         // routing value
         scope.isRouting = false;
