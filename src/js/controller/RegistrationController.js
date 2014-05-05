@@ -23,10 +23,10 @@ app.controller('RegistrationController', ['$scope', 'AppEventManager',
             "bootcamps": [{
                     "city": "Belo Horizonte - Minas Gerais - Brasil",
                     "address": "Agência Plan B | Rua Ouro Preto, 1295   ",
-                    "ptDates": "17 & 18 / Maio / 2014",
-                    "enDates": "17 & 18 / May / 2014",
+                    "ptDates": "Datas a definir",
+                    "enDates": "To be defined",
                     "name": "PhoneGap<br>Bootcamp<br>Belo Horizonte",
-                    "url": "https://eventioz.com.br/e/phonegap-bootcamp-belo-horizonte"
+                    "url": "http://phonegapbootcamp.io"
                 },
                 {
                     "city": "Maceió - Alagoas - Brasil",
@@ -55,8 +55,8 @@ app.controller('RegistrationController', ['$scope', 'AppEventManager',
                 {
                     "city": "San Francisco - California - USA",
                     "address": "HTML5 Dev Conf",
-                    "ptDates": "Segundo semestre de 2014",
-                    "enDates": "Fall 2014",
+                    "ptDates": "Datas a definir",
+                    "enDates": "To be defined",
                     "name": "PhoneGap<br>Bootcamp<br>San Francisco",
                     "url": "http://html5devconf.com/"
             }]
