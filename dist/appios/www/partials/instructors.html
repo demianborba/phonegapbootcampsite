@@ -1,0 +1,52 @@
+<div class="innerpage">
+    <header>
+        <h1 ng-if="isPortuguese" ng-bind-html="pageItems.title.ptLabel">
+            </ng-bind-html>
+        </h1>
+        <h1 ng-if="isEnglish" ng-bind-html="pageItems.title.enLabel">
+            </ng-bind-html>
+        </h1>
+    </header>
+
+    <main>
+
+        <!--demian-->
+        <img class="header-image" src="images/instructors-demian.jpg" alt="">
+        <p class="highlight">
+            <strong>{{pageItems.demian.name}}</strong>
+            <br>{{pageItems.demian.title}}
+            <br>Twitter:
+            <a href="{{pageItems.demian.twitterURL}}" target="_blank">{{pageItems.demian.twitterName}}</a>
+        </p>
+        <p ng-if="isPortuguese">{{pageItems.demian.bio.ptLabel}}</p>
+        <p ng-if="isEnglish">{{pageItems.demian.bio.enLabel}}</p>
+        <p>&nbsp;</p>
+        
+        <!--gustavo-->
+        <img class="header-image" src="images/instructors-gustavo.jpg" alt="">
+        <p class="highlight">
+            <strong>{{pageItems.gustavo.name}}</strong>
+            <br>{{pageItems.gustavo.title}}
+            <br>Twitter:
+            <a href="{{pageItems.gustavo.twitterURL}}" target="_blank">{{pageItems.gustavo.twitterName}}</a>
+        </p>
+        <p ng-if="isPortuguese">{{pageItems.gustavo.bio.ptLabel}}</p>
+        <p ng-if="isEnglish">{{pageItems.gustavo.bio.enLabel}}</p>
+        <p>&nbsp;</p>
+        
+        <!--joselito-->
+        <img class="header-image" src="images/instructors-joselito.jpg" alt="">
+        <p class="highlight">
+            <strong>{{pageItems.joselito.name}}</strong>
+            <br>{{pageItems.joselito.title}}
+            <br>Twitter:
+            <a href="{{pageItems.joselito.twitterURL}}" target="_blank">{{pageItems.joselito.twitterName}}</a>
+        </p>
+        <p ng-if="isPortuguese">{{pageItems.joselito.bio.ptLabel}}</p>
+        <p ng-if="isEnglish">{{pageItems.joselito.bio.enLabel}}</p>
+        <p>&nbsp;</p>
+
+    </main>
+
+    <footer></footer>
+</div>

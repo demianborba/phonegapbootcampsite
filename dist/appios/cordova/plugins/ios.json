@@ -1,0 +1,21 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "config.xml": {
+            "/*": {
+                "<feature name=\"StatusBar\"><param name=\"ios-package\" onload=\"true\" value=\"CDVStatusBar\" /></feature>": 1,
+                "<preference name=\"StatusBarOverlaysWebView\" value=\"false\" />": 1,
+                "<preference name=\"StatusBarBackgroundColor\" value=\"#000000\" />": 1
+            }
+        }
+    },
+    "installed_plugins": {
+        "com.phonegap.plugin.statusbar": {
+            "PACKAGE_NAME": "io.phonegapbootcamp.appios"
+        }
+    },
+    "dependent_plugins": {}
+}

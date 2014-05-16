@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.phonegap.plugin.statusbar"
+    version="1.1.0">
+    <name>StatusBar</name>
+    <description>This plugin allows your application to control the statusbar appearance and behavior on iOS devices running iOS 7 or above.</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,statusbar</keywords>
+
+    <engines>
+            <engine name="cordova" version="&gt;=3.1.0" />
+    </engines>
+
+    <!-- ios -->
+    <platform name="ios">
+        <js-module src="www/statusbar.js" name="statusbar">
+            <clobbers target="window.StatusBar" />
+        </js-module>
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="StatusBar">
+                <param name="ios-package" value="CDVStatusBar" onload="true" />
+            </feature>
+            <preference name="StatusBarOverlaysWebView" value="false" />
+            <preference name="StatusBarBackgroundColor" value="#000000" />
+        </config-file>
+        
+        <header-file src="src/ios/CDVStatusBar.h" />
+        <source-file src="src/ios/CDVStatusBar.m" />
+        
+    </platform>
+
+</plugin>

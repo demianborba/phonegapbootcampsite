@@ -1,0 +1,17 @@
+<div class="innerpage">
+    <header>
+        <h1 ng-if="isPortuguese" ng-bind-html="pageItems.title.ptLabel"></ng-bind-html></h1>
+        <h1 ng-if="isEnglish" ng-bind-html="pageItems.title.enLabel"></ng-bind-html></h1>
+    </header>
+
+    <main>
+        
+        <p ng-if="isPortuguese" ng-bind-html="pageItems.description.ptLabel"></p>
+        <p ng-if="isEnglish" ng-bind-html="pageItems.description.enLabel"></p>
+        <br>
+        <img class="header-image" src="images/gallery/6-device-hands.jpg" alt="">
+        
+    </main>
+
+    <footer></footer>
+</div>

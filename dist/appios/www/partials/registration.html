@@ -1,0 +1,39 @@
+<div class="innerpage">
+    <header>
+        <h1 ng-if="isPortuguese" ng-bind-html="pageItems.title.ptLabel">
+            </ng-bind-html>
+        </h1>
+        <h1 ng-if="isEnglish" ng-bind-html="pageItems.title.enLabel">
+            </ng-bind-html>
+        </h1>
+    </header>
+
+    <main>
+
+        <p ng-if="isPortuguese" ng-bind-html="pageItems.description.ptLabel"></p>
+        <p ng-if="isEnglish" ng-bind-html="pageItems.description.enLabel"></p>
+
+        <div class="table-row registration-page" ng-repeat="bootcamp in pageItems.bootcamps">
+
+            <h2 ng-bind-html="bootcamp.name"></h2>
+            <p ng-if="isPortuguese"><strong>{{bootcamp.ptDates}}</strong></p>
+            <p ng-if="isEnglish"><strong>{{bootcamp.enDates}}</strong></p>
+            <p>{{bootcamp.address}}<br>{{bootcamp.city}}<p>
+
+            <section class="buttons">
+                <button ng-if="isPortuguese" type="button" ng-click="gotoPage(bootcamp.url)">{{pageItems.registerButton.ptLabel}}</button>
+                <button ng-if="isEnglish" type="button" ng-click="gotoPage(bootcamp.url)">{{pageItems.registerButton.enLabel}}</button>
+            </section>
+            
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&nbsp;</p>
+        <section class="buttons">
+            <button ng-if="isPortuguese" type="button" ng-click="gotoContactPage()">{{pageItems.button1.ptLabel}}</button>
+            <button ng-if="isEnglish" type="button" ng-click="gotoContactPage()">{{pageItems.button1.enLabel}}</button>
+        </section>
+    </footer>
+</div>
