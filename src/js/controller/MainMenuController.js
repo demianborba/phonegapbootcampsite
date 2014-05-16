@@ -61,16 +61,10 @@ app.controller('MainMenuController', ['$scope', '$http', '$element', 'AppEventMa
                 "clickRoute": "target"
             },
             {
-                "ptLabel": "Vídeos",
-                "enLabel": "Videos",
-                "icon": "glyphicon-videos",
-                "clickRoute": "videos"
-            },
-            {
-                "ptLabel": "Fotos",
-                "enLabel": "Photos",
-                "icon": "glyphicon-photos",
-                "clickRoute": "photos"
+                "ptLabel": "Fotos & Vídeos",
+                "enLabel": "Photos & Videos",
+                "icon": "glyphicon-photos-videos",
+                "clickRoute": "photosvideos"
             },
             {
                 "ptLabel": "Fale com a organização",

@@ -1,0 +1,1 @@
+app.controller("PhotosVideosController",["$scope","AppEventManager",function(e,o){o.tellMenuNewSectionLoaded("photosvideos"),e.pageItems={title1:{ptLabel:"Fotos",enLabel:"Photos"},title2:{ptLabel:"Vídeos",enLabel:"Videos"}}}]);

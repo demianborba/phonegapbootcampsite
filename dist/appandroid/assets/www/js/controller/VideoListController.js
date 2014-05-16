@@ -1,0 +1,1 @@
+app.controller("VideoListController",["$scope","AppEventManager",function(o,e){e.tellMenuNewSectionLoaded("videos"),o.pageItems={video1:{webmLocation:"videos/bootcamp.webm",mp4Location:"videos/bootcamp.mp4"}}}]);

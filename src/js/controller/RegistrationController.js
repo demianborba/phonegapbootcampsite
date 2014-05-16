@@ -21,14 +21,6 @@ app.controller('RegistrationController', ['$scope', 'AppEventManager',
                 "enLabel": "Want the Bootcamp in your city?"
             },
             "bootcamps": [{
-                    "city": "Belo Horizonte - Minas Gerais - Brasil",
-                    "address": "Agência Plan B | Rua Ouro Preto, 1295   ",
-                    "ptDates": "Datas a definir",
-                    "enDates": "To be defined",
-                    "name": "PhoneGap<br>Bootcamp<br>Belo Horizonte",
-                    "url": "http://phonegapbootcamp.io"
-                },
-                {
                     "city": "Maceió - Alagoas - Brasil",
                     "address": "Faculdade FITS | Av. Comendador Gustavo Paiva, 5017 - Cruz das Almas",
                     "ptDates": "4 & 5 / Agosto / 2014",

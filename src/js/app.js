@@ -137,13 +137,9 @@ app.config(['$routeProvider',
             templateUrl: 'partials/target.html',
             controller: 'TargetController'
         }).
-        when('/videos', {
-            templateUrl: 'partials/videos.html',
-            controller: 'VideosController'
-        }).
-        when('/photos', {
-            templateUrl: 'partials/photos.html',
-            controller: 'PhotosController'
+        when('/photosvideos', {
+            templateUrl: 'partials/photosvideos.html',
+            controller: 'PhotosVideosController'
         }).
         when('/talktous', {
             templateUrl: 'partials/talktous.html',

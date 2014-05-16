@@ -54,13 +54,9 @@ gulp.task('images', function () {
 gulp.task('videos', function () {
 
     gulp.src('src/videos/bootcamp.jpg')
-        .pipe(gulp.dest('dist/website/videos/'))
-        .pipe(gulp.dest('dist/appandroid/assets/www/videos/'))
-        .pipe(gulp.dest('dist/appblackberry10/www/videos/'));
+        .pipe(gulp.dest('dist/website/videos/'));
     gulp.src('src/videos/bootcamp.mp4')
-        .pipe(gulp.dest('dist/website/videos/'))
-        .pipe(gulp.dest('dist/appandroid/assets/www/videos/'))
-        .pipe(gulp.dest('dist/appblackberry10/www/videos/'));
+        .pipe(gulp.dest('dist/website/videos/'));
     gulp.src('src/videos/bootcamp.webm')
         .pipe(gulp.dest('dist/website/videos/'));
 });
