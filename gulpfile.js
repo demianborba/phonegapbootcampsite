@@ -16,6 +16,15 @@ gulp.task('lint', function () {
         .pipe(jshint.reporter('jshint-stylish'));
 });
 
+gulp.task('partials', function () {
+
+    gulp.src('src/partials/**')
+        .pipe(gulp.dest('dist/website/partials/'))
+        .pipe(gulp.dest('dist/appios/www/partials/'))
+        .pipe(gulp.dest('dist/appblackberry10/www/partials/'))
+        .pipe(gulp.dest('dist/appandroid/assets/www/partials/'));
+});
+
 gulp.task('sass', function () {
     // create css using sass and place in the css directory
     gulp.src('src/scss/*.scss')
@@ -113,7 +122,7 @@ gulp.task('browser-sync', function () {
 
 gulp.task('default', function () {
 
-    gulp.run('sass', 'html', 'partials', 'images', 'videos', 'fonts', 'bower_components', 'lint', 'scripts');
+    gulp.run('sass', 'partials', 'images', 'videos', 'fonts', 'bower_components', 'lint', 'scripts');
     // gulp.run('sass', 'html', 'partials', 'images', 'videos', 'fonts', 'bower_components', 'lint', 'scripts', 'browser-sync');
 
     gulp.watch('src/scss/*.scss', function () {
@@ -122,10 +131,6 @@ gulp.task('default', function () {
 
     gulp.watch('src/js/**', function () {
         gulp.run('lint', 'scripts');
-    });
-
-    gulp.watch('src/*.html', function () {
-        gulp.run('html');
     });
 
     gulp.watch('src/partials/**', function () {

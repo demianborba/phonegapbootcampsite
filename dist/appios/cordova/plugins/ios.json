@@ -8,12 +8,16 @@
             "/*": {
                 "<feature name=\"StatusBar\"><param name=\"ios-package\" onload=\"true\" value=\"CDVStatusBar\" /></feature>": 1,
                 "<preference name=\"StatusBarOverlaysWebView\" value=\"false\" />": 1,
-                "<preference name=\"StatusBarBackgroundColor\" value=\"#000000\" />": 1
+                "<preference name=\"StatusBarBackgroundColor\" value=\"#000000\" />": 1,
+                "<feature name=\"Globalization\"><param name=\"ios-package\" value=\"CDVGlobalization\" /></feature>": 1
             }
         }
     },
     "installed_plugins": {
         "com.phonegap.plugin.statusbar": {
+            "PACKAGE_NAME": "io.phonegapbootcamp.appios"
+        },
+        "org.apache.cordova.globalization": {
             "PACKAGE_NAME": "io.phonegapbootcamp.appios"
         }
     },

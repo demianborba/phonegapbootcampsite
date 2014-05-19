@@ -87,6 +87,26 @@ app.controller('AppController', ['$scope', '$rootScope',
             scope.resetYpositionMainMenu();
             scope.resetScrollableAreaHeight();
         }, false);
+
+        // cordova specific code to set the language
+        document.addEventListener("deviceready", function () {
+
+            navigator.globalization.getPreferredLanguage(
+                function (language) {
+                    if (language.value === 'pt') { 
+                        rootScope.setLanguage('pt');
+                    } else {
+                        rootScope.setLanguage('en');
+                    }
+                    rootScope.$apply();
+                },
+                function () {
+                    alert('Error getting language\n');
+                }
+            );
+
+        }, false);
+
 }]);
 
 // creating a service called App Event Manager for controllers to talk to each other
