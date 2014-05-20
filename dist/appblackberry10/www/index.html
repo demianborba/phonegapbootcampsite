@@ -34,51 +34,55 @@
     <script type="text/javascript" src="js/cordovaCustom.js"></script>
 </head>
 
-<body ng-controller="AppController">
+<body>
+    <div id="app" ng-controller="AppController">
 
-    <a href="https://github.com/demianborba/phonegapbootcampsite" class="github-link">
-        <img src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub">
-    </a>
+        <a href="https://github.com/demianborba/phonegapbootcampsite" class="github-link">
+            <img src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub">
+        </a>
 
-    <div id="smartphones-image-for-desktop">
-        <div id="wrapper">
-            <div class="snap-drawers">
-                <div class="snap-drawer snap-drawer-left">
-                    <div id="list-menu-left" ng-controller="MainMenuController">
-                        <span class="caption-language-selector" ng-if="isPortuguese">{{languageSelectorItems.caption.ptLabel}}:</span>
-                        <span class="caption-language-selector" ng-if="isEnglish">{{languageSelectorItems.caption.enLabel}}:</span>
-                        <div id="language-selectors">
-                            <span ng-class="{'selected':isPortuguese}" ng-click="setLanguage('pt')">{{languageSelectorItems.button.ptLabel}}</span>
-                            <span ng-class="{'selected':isEnglish}" ng-click="setLanguage('en')">{{languageSelectorItems.button.enLabel}}</span>
+        <div id="smartphones-image-for-desktop">
+            <div id="wrapper">
+                <div class="snap-drawers">
+                    <div class="snap-drawer snap-drawer-left">
+                        <div id="list-menu-left" ng-controller="MainMenuController">
+                            <span class="caption-language-selector" ng-if="isPortuguese">{{languageSelectorItems.caption.ptLabel}}:</span>
+                            <span class="caption-language-selector" ng-if="isEnglish">{{languageSelectorItems.caption.enLabel}}:</span>
+                            <div id="language-selectors">
+                                <span ng-class="{'selected':isPortuguese}" ng-click="setLanguage('pt')">{{languageSelectorItems.button.ptLabel}}</span>
+                                <span ng-class="{'selected':isEnglish}" ng-click="setLanguage('en')">{{languageSelectorItems.button.enLabel}}</span>
+                            </div>
+                            <ul id="menuItems">
+                                <li id="{{item.clickRoute}}" ng-repeat="item in mainMenuItems">
+                                    <a ng-click="gotoSection(item.clickRoute)">
+                                        <span class="glyphicon {{item.icon}}"></span>
+                                        <p ng-if="isPortuguese">{{item.ptLabel}}</p>
+                                        <p ng-if="isEnglish">{{item.enLabel}}</p>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                        <ul id="menuItems">
-                            <li id="{{item.clickRoute}}" ng-repeat="item in mainMenuItems">
-                                <a ng-click="gotoSection(item.clickRoute)">
-                                    <span class="glyphicon {{item.icon}}"></span>
-                                    <p ng-if="isPortuguese">{{item.ptLabel}}</p>
-                                    <p ng-if="isEnglish">{{item.enLabel}}</p>
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
-            </div>
-            <div class="snap-drawer snap-drawer-right"></div>
-            <div id="content" class="snap-content">
-                <div id="scrollable-content-area">
-                    <div ng-show="isRouting">
-                        <h1 ng-if="isPortuguese">Carregando</h1>
-                        <h1 ng-if="isEnglish">Loading</h1>
+                <div class="snap-drawer snap-drawer-right"></div>
+                <div id="content" class="snap-content">
+                    <div id="scrollable-content-area">
+                        <div ng-show="isRouting">
+                            <h1 ng-if="isPortuguese">Carregando</h1>
+                            <h1 ng-if="isEnglish">Loading</h1>
+                        </div>
+                        <div ng-show="!isRouting">
+                            <ng-view></ng-view>
+                        </div>
                     </div>
-                    <div ng-show="!isRouting">
-                        <ng-view></ng-view>
+                    <div id="toolbar">
+                        <a ng-click="openSnapper()">
+                            <span class="glyphicon glyphicon-open-left"></span>
+                        </a>
+                        <p id="label-toolbar">
+                            <a ng-click="openSnapper()">Menu</a>
+                        </p>
                     </div>
-                </div>
-                <div id="toolbar">
-                    <a ng-click="openSnapper()">
-                        <span class="glyphicon glyphicon-open-left"></span>
-                    </a>
-                    <p id="label-toolbar"><a ng-click="openSnapper()">Menu</a></p>
                 </div>
             </div>
         </div>

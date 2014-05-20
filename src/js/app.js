@@ -25,7 +25,7 @@ app.controller('AppController', ['$scope', '$rootScope',
             }
         };
         rootScope.setLanguage('pt');
-
+        
         // routing value
         scope.isRouting = false;
 
@@ -86,25 +86,6 @@ app.controller('AppController', ['$scope', '$rootScope',
         window.addEventListener('orientationchange', function () {
             scope.resetYpositionMainMenu();
             scope.resetScrollableAreaHeight();
-        }, false);
-
-        // cordova specific code to set the language
-        document.addEventListener("deviceready", function () {
-
-            navigator.globalization.getPreferredLanguage(
-                function (language) {
-                    if (language.value === 'pt') { 
-                        rootScope.setLanguage('pt');
-                    } else {
-                        rootScope.setLanguage('en');
-                    }
-                    rootScope.$apply();
-                },
-                function () {
-                    alert('Error getting language\n');
-                }
-            );
-
         }, false);
 
 }]);

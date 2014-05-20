@@ -1,33 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns     = "http://www.w3.org/ns/widgets"
-        id        = "io.phonegapbootcamp.appandroid"
-        version   = "1.1">
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.phonegapbootcamp.appandroid" version="1.1" xmlns="http://www.w3.org/ns/widgets">
     <name>PhoneGap Bootcamp</name>
-
     <description>
         2 days of intense training covering mobile applications using Cordova for multiple mobile platforms, focusing on Single Page Apps and Performance.
     </description>
-
-    <author href="http://phonegapbootcamp.io" email="contato@phonegapbootcamp.io">
+    <author email="contato@phonegapbootcamp.io" href="http://phonegapbootcamp.io">
         Demian Borba
     </author>
-
-    <access origin="*"/>
-
-    <!-- <content src="http://mysite.com/myapp.html" /> for external pages -->
+    <access origin="*" />
     <content src="index.html" />
-
     <preference name="loglevel" value="DEBUG" />
     <preference name="backgroundColor" value="0xFFF" />
-    
-    <!--
-	  <preference name="splashscreen" value="layout/splash.png" />
-      <preference name="loadUrlTimeoutValue" value="20000" />
-      <preference name="InAppBrowserStorageEnabled" value="true" />
-      <preference name="disallowOverscroll" value="true" />
-    -->
-    <!-- This is required for native Android hooks -->
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
+    </feature>
+    <feature name="Globalization">
+        <param name="android-package" value="org.apache.cordova.globalization.Globalization" />
     </feature>
 </widget>
