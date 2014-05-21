@@ -11,7 +11,6 @@ document.addEventListener("deviceready", function () {
             } else {
                rootScopeReference.$apply(function () { rootScopeReference.setLanguage('en'); });
             }
-            window.alert(language.value);
         },
         function () {
             // in case error getting the language, use English
