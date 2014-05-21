@@ -1,0 +1,7 @@
+{
+    "version": "1.0.0",
+    "name": "com.blackberry.jpps",
+    "description": "BlackBerry 10 JPPS Library",
+    "license": "Apache 2.0",
+    "engines": []
+}

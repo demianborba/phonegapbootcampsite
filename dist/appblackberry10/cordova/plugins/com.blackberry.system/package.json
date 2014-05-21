@@ -1,0 +1,7 @@
+{
+    "version": "1.0.0",
+    "name": "com.blackberry.system",
+    "description": "BlackBerry 10 System APIs",
+    "license": "Apache 2.0",
+    "engines": []
+}

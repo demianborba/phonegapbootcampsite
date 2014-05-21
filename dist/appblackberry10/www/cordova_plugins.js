@@ -1,24 +1,19 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "file": "plugins/org.apache.cordova.globalization/www/GlobalizationError.js",
-        "id": "org.apache.cordova.globalization.GlobalizationError",
+        "file": "plugins/com.blackberry.system/www/client.js",
+        "id": "com.blackberry.system.client",
         "clobbers": [
-            "window.GlobalizationError"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.globalization/www/globalization.js",
-        "id": "org.apache.cordova.globalization.globalization",
-        "clobbers": [
-            "navigator.globalization"
+            "blackberry.system"
         ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "org.apache.cordova.globalization": "0.2.8-dev"
+    "com.blackberry.system": "1.0.0",
+    "com.blackberry.utils": "1.0.0",
+    "com.blackberry.jpps": "1.0.0"
 }
 // BOTTOM OF METADATA
 });

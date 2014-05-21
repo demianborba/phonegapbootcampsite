@@ -1,0 +1,7 @@
+{
+    "version": "1.0.0",
+    "name": "com.blackberry.utils",
+    "description": "BlackBerry 10 Utilities Library",
+    "license": "Apache 2.0",
+    "engines": []
+}
