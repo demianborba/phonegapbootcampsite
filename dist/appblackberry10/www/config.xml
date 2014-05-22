@@ -19,4 +19,5 @@
     <feature name="com.blackberry.utils" />
     <feature name="com.blackberry.jpps" />
     <feature name="com.blackberry.system" value="com.blackberry.system" />
+    <feature name="com.blackberry.pim.lib" />
 </widget>

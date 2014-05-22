@@ -3,7 +3,6 @@ document.addEventListener("deviceready", function () {
     // set status bar to match app color (ios only)
     StatusBar.backgroundColorByHexString("#288ac7");
     
-    // cordova specific code to set the language
     var appReference = document.getElementById('app');
     var rootScopeReference = angular.element(appReference).scope();
 

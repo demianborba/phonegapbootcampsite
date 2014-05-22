@@ -8,8 +8,10 @@
             "/widget": {
                 "<feature name=\"com.blackberry.utils\" />": 1,
                 "<feature name=\"com.blackberry.jpps\" />": 1,
-                "<feature name=\"com.blackberry.system\" value=\"com.blackberry.system\" />": 1
-            }
+                "<feature name=\"com.blackberry.system\" value=\"com.blackberry.system\" />": 1,
+                "<feature name=\"com.blackberry.pim.lib\" />": 1
+            },
+            "/widget/rim:permissions": {}
         }
     },
     "installed_plugins": {
@@ -22,6 +24,9 @@
             "PACKAGE_NAME": "io.phonegapbootcamp.appblackberry10"
         },
         "com.blackberry.jpps": {
+            "PACKAGE_NAME": "io.phonegapbootcamp.appblackberry10"
+        },
+        "com.blackberry.pim.lib": {
             "PACKAGE_NAME": "io.phonegapbootcamp.appblackberry10"
         }
     }

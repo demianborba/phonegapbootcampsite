@@ -1,6 +1,5 @@
 document.addEventListener("deviceready", function () {
     
-    // cordova specific code to set the language
     var appReference = document.getElementById('app');
     var rootScopeReference = angular.element(appReference).scope();
 

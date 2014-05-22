@@ -1,0 +1,7 @@
+{
+    "version": "1.0.0",
+    "name": "com.blackberry.pim.lib",
+    "description": "BlackBerry 10 PIM Library",
+    "license": "Apache 2.0",
+    "engines": []
+}

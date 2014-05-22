@@ -13,7 +13,8 @@ module.exports.metadata =
 {
     "com.blackberry.system": "1.0.0",
     "com.blackberry.utils": "1.0.0",
-    "com.blackberry.jpps": "1.0.0"
+    "com.blackberry.jpps": "1.0.0",
+    "com.blackberry.pim.lib": "1.0.0"
 }
 // BOTTOM OF METADATA
 });
