@@ -26,7 +26,8 @@ app.controller('RegistrationController', ['$scope', 'AppEventManager',
                     "ptDates": "4 & 5 / Agosto / 2014",
                     "enDates": "4 & 5 / August / 2014",
                     "name": "PhoneGap<br>Bootcamp<br>Maceió",
-                    "url": "http://www.jornadaadobe.com"
+                    "url": "http://www.jornadaadobe.com",
+                    "pageDestination": "_blank"
                 },
                 {
                     "city": "Aracaju - Sergipe - Brasil",
@@ -34,7 +35,8 @@ app.controller('RegistrationController', ['$scope', 'AppEventManager',
                     "ptDates": "7 & 8 / Agosto / 2014",
                     "enDates": "7 & 8 / August / 2014",
                     "name": "PhoneGap<br>Bootcamp<br>Aracaju",
-                    "url": "http://www.jornadaadobe.com"
+                    "url": "http://www.jornadaadobe.com",
+                    "pageDestination": "_blank"
                 },
                 {
                     "city": "João Pessoa - Paraíba - Brasil",
@@ -42,15 +44,25 @@ app.controller('RegistrationController', ['$scope', 'AppEventManager',
                     "ptDates": "18 & 19 / Agosto / 2014",
                     "enDates": "18 & 19 / August / 2014",
                     "name": "PhoneGap<br>Bootcamp<br>João Pessoa",
-                    "url": "http://www.jornadaadobe.com"
+                    "url": "http://www.jornadaadobe.com",
+                    "pageDestination": "_blank"
                 },
                 {
+                    "city": "Rio de Janeiro - RJ - Brasil",
+                    "address": "NAVE - Faculdade Estácio de Sá",
+                    "ptDates": "11 & 12 / Setembro / 2014",
+                    "enDates": "11 & 12 / September / 2014",
+                    "name": "PhoneGap<br>Bootcamp<br>Rio de Janeiro",
+                    "url": "javascript:alert('As inscrições para o Rio de Janeiro abrirão em breve!');",
+                    "pageDestination": "_self"
+                },{
                     "city": "San Francisco - California - USA",
                     "address": "HTML5 Dev Conf",
                     "ptDates": "Datas a definir",
                     "enDates": "To be defined",
                     "name": "PhoneGap<br>Bootcamp<br>San Francisco",
-                    "url": "http://html5devconf.com/"
+                    "url": "javascript:alert('Registration for SF Bootcamp will open soon!');",
+                    "pageDestination": "_self"
             }]
         };
         
@@ -58,7 +70,7 @@ app.controller('RegistrationController', ['$scope', 'AppEventManager',
             window.location.href = '#/talktous';
         }
         
-        scope.gotoPage = function (page) {
-            window.open(page, '_blank');
+        scope.gotoPage = function (page, destination) {
+            window.open(page, destination);
         }
 }]);
