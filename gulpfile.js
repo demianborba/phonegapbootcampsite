@@ -122,8 +122,8 @@ gulp.task('browser-sync', function () {
 
 gulp.task('default', function () {
 
-    gulp.run('sass', 'partials', 'images', 'videos', 'fonts', 'bower_components', 'lint', 'scripts');
-//     gulp.run('sass', 'html', 'partials', 'images', 'videos', 'fonts', 'bower_components', 'lint', 'scripts', 'browser-sync');
+//    gulp.run('sass', 'partials', 'images', 'videos', 'fonts', 'bower_components', 'lint', 'scripts');
+     gulp.run('sass', 'partials', 'images', 'videos', 'fonts', 'bower_components', 'lint', 'scripts', 'browser-sync');
 
     gulp.watch('src/scss/*.scss', function () {
         gulp.run('sass');

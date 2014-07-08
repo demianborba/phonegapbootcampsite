@@ -53,12 +53,10 @@
                                 <span ng-class="{'selected':isEnglish}" ng-click="setLanguage('en')">{{languageSelectorItems.button.enLabel}}</span>
                             </div>
                             <ul id="menuItems">
-                                <li id="{{item.clickRoute}}" ng-repeat="item in mainMenuItems">
-                                    <a ng-click="gotoSection(item.clickRoute)">
-                                        <span class="glyphicon {{item.icon}}"></span>
-                                        <p ng-if="isPortuguese">{{item.ptLabel}}</p>
-                                        <p ng-if="isEnglish">{{item.enLabel}}</p>
-                                    </a>
+                                <li id="{{item.clickRoute}}" ng-repeat="item in mainMenuItems" ng-click="gotoSection(item.clickRoute)">
+                                    <span class="glyphicon {{item.icon}}"></span>
+                                    <p ng-if="isPortuguese">{{item.ptLabel}}</p>
+                                    <p ng-if="isEnglish">{{item.enLabel}}</p>
                                 </li>
                             </ul>
                         </div>
