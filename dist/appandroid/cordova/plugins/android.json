@@ -4,14 +4,35 @@
         "uninstalled": []
     },
     "config_munge": {
-        "res/xml/config.xml": {
-            "/*": {
-                "<feature name=\"Globalization\"><param name=\"android-package\" value=\"org.apache.cordova.globalization.Globalization\" /></feature>": 1
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Globalization\"><param name=\"android-package\" value=\"org.apache.cordova.globalization.Globalization\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
             }
         }
     },
     "installed_plugins": {
         "org.apache.cordova.globalization": {
+            "PACKAGE_NAME": "io.phonegapbootcamp.appandroid"
+        },
+        "org.apache.cordova.dialogs": {
+            "PACKAGE_NAME": "io.phonegapbootcamp.appandroid"
+        },
+        "org.apache.cordova.inappbrowser": {
             "PACKAGE_NAME": "io.phonegapbootcamp.appandroid"
         }
     },

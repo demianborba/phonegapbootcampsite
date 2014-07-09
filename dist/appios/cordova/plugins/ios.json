@@ -4,12 +4,52 @@
         "uninstalled": []
     },
     "config_munge": {
-        "config.xml": {
-            "/*": {
-                "<feature name=\"StatusBar\"><param name=\"ios-package\" onload=\"true\" value=\"CDVStatusBar\" /></feature>": 1,
-                "<preference name=\"StatusBarOverlaysWebView\" value=\"false\" />": 1,
-                "<preference name=\"StatusBarBackgroundColor\" value=\"#000000\" />": 1,
-                "<feature name=\"Globalization\"><param name=\"ios-package\" value=\"CDVGlobalization\" /></feature>": 1
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"StatusBar\"><param name=\"ios-package\" onload=\"true\" value=\"CDVStatusBar\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"StatusBarOverlaysWebView\" value=\"false\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"StatusBarBackgroundColor\" value=\"#000000\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Globalization\"><param name=\"ios-package\" value=\"CDVGlobalization\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVInAppBrowser\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "framework": {
+                "parents": {
+                    "AudioToolbox.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
+                    ],
+                    "CoreGraphics.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ]
+                }
             }
         }
     },
@@ -18,6 +58,12 @@
             "PACKAGE_NAME": "io.phonegapbootcamp.appios"
         },
         "org.apache.cordova.globalization": {
+            "PACKAGE_NAME": "io.phonegapbootcamp.appios"
+        },
+        "org.apache.cordova.dialogs": {
+            "PACKAGE_NAME": "io.phonegapbootcamp.appios"
+        },
+        "org.apache.cordova.inappbrowser": {
             "PACKAGE_NAME": "io.phonegapbootcamp.appios"
         }
     },

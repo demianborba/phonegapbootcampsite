@@ -26,6 +26,15 @@ app.controller('AppController', ['$scope', '$rootScope',
         };
         rootScope.setLanguage('pt');
         
+        // global method to show messages (native and browser)
+        rootScope.showMessage = function (message) {
+            if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
+                navigator.notification.alert(message, null);
+            } else {
+                alert(message);
+            }
+        };
+        
         // routing value
         scope.isRouting = false;
 

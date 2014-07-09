@@ -4,18 +4,43 @@
         "uninstalled": []
     },
     "config_munge": {
-        "www/config.xml": {
-            "/widget": {
-                "<feature name=\"com.blackberry.utils\" />": 1,
-                "<feature name=\"com.blackberry.jpps\" />": 1,
-                "<feature name=\"com.blackberry.system\" value=\"com.blackberry.system\" />": 1,
-                "<feature name=\"com.blackberry.pim.lib\" />": 1
-            },
-            "/widget/rim:permissions": {}
+        "files": {
+            "www/config.xml": {
+                "parents": {
+                    "/widget": [
+                        {
+                            "xml": "<feature name=\"com.blackberry.utils\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"com.blackberry.jpps\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"com.blackberry.system\" value=\"com.blackberry.system\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"com.blackberry.pim.lib\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\" value=\"Notification\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
         }
     },
     "installed_plugins": {
         "com.blackberry.system": {
+            "PACKAGE_NAME": "io.phonegapbootcamp.appblackberry10"
+        },
+        "org.apache.cordova.dialogs": {
+            "PACKAGE_NAME": "io.phonegapbootcamp.appblackberry10"
+        },
+        "org.apache.cordova.inappbrowser": {
             "PACKAGE_NAME": "io.phonegapbootcamp.appblackberry10"
         }
     },

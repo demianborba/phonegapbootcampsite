@@ -1,5 +1,5 @@
-app.controller('RegistrationController', ['$scope', 'AppEventManager',
-    function (scope, AppEventManager) {
+app.controller('RegistrationController', ['$scope', 'AppEventManager', '$rootScope',
+    function (scope, AppEventManager, rootScope) {
         AppEventManager.tellMenuNewSectionLoaded('registration');
 
         // defining multiple language content
@@ -26,8 +26,7 @@ app.controller('RegistrationController', ['$scope', 'AppEventManager',
                     "ptDates": "4 & 5 / Agosto / 2014",
                     "enDates": "4 & 5 / August / 2014",
                     "name": "PhoneGap<br>Bootcamp<br>Maceió",
-                    "url": "http://www.jornadaadobe.com",
-                    "pageDestination": "_blank"
+                    "url": "http://www.jornadaadobe.com"
                 },
                 {
                     "city": "Aracaju - Sergipe - Brasil",
@@ -35,8 +34,7 @@ app.controller('RegistrationController', ['$scope', 'AppEventManager',
                     "ptDates": "7 & 8 / Agosto / 2014",
                     "enDates": "7 & 8 / August / 2014",
                     "name": "PhoneGap<br>Bootcamp<br>Aracaju",
-                    "url": "http://www.jornadaadobe.com",
-                    "pageDestination": "_blank"
+                    "url": "http://www.jornadaadobe.com"
                 },
                 {
                     "city": "João Pessoa - Paraíba - Brasil",
@@ -44,8 +42,7 @@ app.controller('RegistrationController', ['$scope', 'AppEventManager',
                     "ptDates": "18 & 19 / Agosto / 2014",
                     "enDates": "18 & 19 / August / 2014",
                     "name": "PhoneGap<br>Bootcamp<br>João Pessoa",
-                    "url": "http://www.jornadaadobe.com",
-                    "pageDestination": "_blank"
+                    "url": "http://www.jornadaadobe.com"
                 },
                 {
                     "city": "Rio de Janeiro - RJ - Brasil",
@@ -53,24 +50,26 @@ app.controller('RegistrationController', ['$scope', 'AppEventManager',
                     "ptDates": "11 & 12 / Setembro / 2014",
                     "enDates": "11 & 12 / September / 2014",
                     "name": "PhoneGap<br>Bootcamp<br>Rio de Janeiro",
-                    "url": "javascript:alert('As inscrições para o Rio de Janeiro abrirão em breve!');",
-                    "pageDestination": "_self"
-                },{
+                    "url": "message:As inscrições para o Rio de Janeiro abrirão em breve!"
+                }, {
                     "city": "San Francisco - California - USA",
                     "address": "HTML5 Dev Conf",
                     "ptDates": "Datas a definir",
                     "enDates": "To be defined",
                     "name": "PhoneGap<br>Bootcamp<br>San Francisco",
-                    "url": "javascript:alert('Registration for SF Bootcamp will open soon!');",
-                    "pageDestination": "_self"
+                    "url": "message:Registration for SF Bootcamp will open soon!"
             }]
         };
-        
+
         scope.gotoContactPage = function () {
             window.location.href = '#/talktous';
-        }
-        
-        scope.gotoPage = function (page, destination) {
-            window.open(page, destination);
-        }
+        };
+
+        scope.gotoPage = function (url) {
+            if (url.indexOf("message:") > -1) {
+                rootScope.showMessage(url.substr(8, url.length));
+            } else {
+                window.open(url, '_blank');
+            }
+        };
 }]);
