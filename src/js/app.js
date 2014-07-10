@@ -28,9 +28,11 @@ app.controller('AppController', ['$scope', '$rootScope',
         
         // global method to show messages (native and browser)
         rootScope.showMessage = function (message) {
-            if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
+            if (navigator.notification) {
+                // cordova app
                 navigator.notification.alert(message, null);
             } else {
+                // regular browser
                 alert(message);
             }
         };
