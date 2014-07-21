@@ -21,11 +21,11 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Globalization\"><param name=\"ios-package\" value=\"CDVGlobalization\" /></feature>",
+                            "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
+                            "xml": "<feature name=\"Globalization\"><param name=\"ios-package\" value=\"CDVGlobalization\" /></feature>",
                             "count": 1
                         },
                         {
@@ -57,10 +57,10 @@
         "com.phonegap.plugin.statusbar": {
             "PACKAGE_NAME": "io.phonegapbootcamp.appios"
         },
-        "org.apache.cordova.globalization": {
+        "org.apache.cordova.dialogs": {
             "PACKAGE_NAME": "io.phonegapbootcamp.appios"
         },
-        "org.apache.cordova.dialogs": {
+        "org.apache.cordova.globalization": {
             "PACKAGE_NAME": "io.phonegapbootcamp.appios"
         },
         "org.apache.cordova.inappbrowser": {

@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>DC230D03-3A59-4D3E-A7FD-17A4E1B75645</string>
+	<string>AAC12AC9-774D-441E-A7B5-E411945A040E</string>
 	<key>IDESourceControlProjectName</key>
 	<string>PhoneGapBootcamp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>D998B62C-75E1-4F36-8D43-7840619BB343</key>
+		<key>E3E099FC-62BF-4FE9-8732-65A13E008CFC</key>
 		<string>https://github.com/demianborba/phonegapbootcampsite.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>dist/appios/PhoneGapBootcamp.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>D998B62C-75E1-4F36-8D43-7840619BB343</key>
+		<key>E3E099FC-62BF-4FE9-8732-65A13E008CFC</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D998B62C-75E1-4F36-8D43-7840619BB343</string>
+	<string>E3E099FC-62BF-4FE9-8732-65A13E008CFC</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D998B62C-75E1-4F36-8D43-7840619BB343</string>
+			<string>E3E099FC-62BF-4FE9-8732-65A13E008CFC</string>
 			<key>IDESourceControlWCCName</key>
 			<string>phonegapbootcampsite</string>
 		</dict>

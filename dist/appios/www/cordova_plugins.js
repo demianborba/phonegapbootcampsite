@@ -8,6 +8,13 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/org.apache.cordova.dialogs/www/notification.js",
+        "id": "org.apache.cordova.dialogs.notification",
+        "merges": [
+            "navigator.notification"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.globalization/www/GlobalizationError.js",
         "id": "org.apache.cordova.globalization.GlobalizationError",
         "clobbers": [
@@ -22,13 +29,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/org.apache.cordova.dialogs/www/notification.js",
-        "id": "org.apache.cordova.dialogs.notification",
-        "merges": [
-            "navigator.notification"
-        ]
-    },
-    {
         "file": "plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js",
         "id": "org.apache.cordova.inappbrowser.inappbrowser",
         "clobbers": [
@@ -40,8 +40,8 @@ module.exports.metadata =
 // TOP OF METADATA
 {
     "com.phonegap.plugin.statusbar": "1.1.0",
-    "org.apache.cordova.globalization": "0.2.8-dev",
     "org.apache.cordova.dialogs": "0.2.8",
+    "org.apache.cordova.globalization": "0.2.8",
     "org.apache.cordova.inappbrowser": "0.5.0"
 }
 // BOTTOM OF METADATA
