@@ -50,7 +50,7 @@ app.controller('RegistrationController', ['$scope', 'AppEventManager', '$rootSco
                     "ptDates": "11 & 12 / Setembro / 2014",
                     "enDates": "11 & 12 / September / 2014",
                     "name": "PhoneGap<br>Bootcamp<br>Rio de Janeiro",
-                    "url": "message:As inscrições para o Rio de Janeiro abrirão em breve!"
+                    "url": "https://actioncreations.com/store/produto/phonegap-bootcamp-rio-de-janeiro-11-e-12-setembro-2014/"
                 }, {
                     "city": "San Francisco - California - USA",
                     "address": "HTML5 Dev Conf",
