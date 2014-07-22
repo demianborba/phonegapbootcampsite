@@ -106,6 +106,7 @@ textarea {
 #content {
     background: white;
     overflow: hidden;
+    border-left: solid 1px $main-menu-selected-color;
 }
 // toolbar inside content area
 #toolbar {
@@ -152,13 +153,15 @@ textarea {
     overflow-x: hidden;
     overflow-y: auto;
 }
+.snap-drawer {
+    width: 100%;
+}
 .snap-drawers {
     background: $main-app-color;
 }
 .snap-drawer-left {
     background-color: $main-app-color;
-    font-family: $main-font-name;
-    border-right:solid 1px $main-menu-selected-color;
+    font-family: $main-font-name;    
 }
 .menu-item-selected {
     background-color: $main-menu-selected-color;
@@ -176,7 +179,7 @@ textarea {
 .snap-drawer-left li {
     cursor: pointer;
     height: 30px;
-    padding: 15px 10px 5px 0;
+    padding: 15px 0 5px 0;
 }
 .disable-content-scrolling {
     pointer-events: none;
