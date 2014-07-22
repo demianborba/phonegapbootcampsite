@@ -158,6 +158,7 @@ textarea {
 .snap-drawer-left {
     background-color: $main-app-color;
     font-family: $main-font-name;
+    border-right:solid 1px $main-menu-selected-color;
 }
 .menu-item-selected {
     background-color: $main-menu-selected-color;
