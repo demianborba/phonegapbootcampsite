@@ -21,22 +21,6 @@ app.controller('RegistrationController', ['$scope', 'AppEventManager', '$rootSco
                 "enLabel": "Want the Bootcamp in your city?"
             },
             "bootcamps": [{
-                    "city": "Maceió - Alagoas - Brasil",
-                    "address": "Faculdade FITS | Av. Comendador Gustavo Paiva, 5017 - Cruz das Almas",
-                    "ptDates": "4 & 5 / Agosto / 2014",
-                    "enDates": "4 & 5 / August / 2014",
-                    "name": "PhoneGap<br>Bootcamp<br>Maceió",
-                    "url": "http://www.jornadaadobe.com"
-                },
-                {
-                    "city": "Aracaju - Sergipe - Brasil",
-                    "address": "UNIT, Campus Farolândia | Av. Murilo Dantas, 300 - Farolândia",
-                    "ptDates": "7 & 8 / Agosto / 2014",
-                    "enDates": "7 & 8 / August / 2014",
-                    "name": "PhoneGap<br>Bootcamp<br>Aracaju",
-                    "url": "http://www.jornadaadobe.com"
-                },
-                {
                     "city": "João Pessoa - Paraíba - Brasil",
                     "address": "UFPB | Cidade Universitária",
                     "ptDates": "18 & 19 / Agosto / 2014",
