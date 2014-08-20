@@ -120,21 +120,29 @@ gulp.task('browser-sync', function () {
     });
 });
 
-gulp.task('default', function () {
-
-    gulp.run('sass', 'partials', 'images', 'videos', 'fonts', 'bower_components', 'lint', 'scripts');
-//  gulp.run('sass', 'partials', 'images', 'videos', 'fonts', 'bower_components', 'lint', 'scripts', 'browser-sync');
-
-    gulp.watch('src/scss/*.scss', function () {
-        gulp.run('sass');
-    });
-
-    gulp.watch('src/js/**', function () {
-        gulp.run('lint', 'scripts');
-    });
-
-    gulp.watch('src/partials/**', function () {
-        gulp.run('partials');
-    });
-    
+gulp.task('watch-sass', function(){
+    gulp.watch(['src/scss/*.scss'],['sass']);
 });
+
+gulp.task('watch-js', function(){
+    gulp.watch(['src/js/**'],['lint','scripts']);
+});
+
+gulp.task('watch-partials', function(){
+    gulp.watch(['src/partials/**'],['partials']);
+});
+
+gulp.task('default', ['sass', 'partials', 'images', 'videos', 'fonts', 'bower_components', 'lint', 'scripts', 'watch-sass', 'watch-js', 'watch-partials']);
+
+//gulp.task('default', ['sass', 'partials', 'images', 'videos', 'fonts', 'bower_components', 'lint', 'scripts', 'browser-sync', 'watch-sass', 'watch-js', 'watch-partials']);
+
+
+    
+
+
+
+
+
+
+
+
