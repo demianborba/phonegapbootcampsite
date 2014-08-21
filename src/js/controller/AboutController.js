@@ -1,6 +1,10 @@
-app.controller('AboutController', ['$scope', 'AppEventManager',
-    function (scope, AppEventManager) {
+app.controller('AboutController', ['$scope','$rootScope','AppEventManager','$routeParams',
+    function (scope, rootScope, AppEventManager, routeParams) {
         AppEventManager.tellMenuNewSectionLoaded('about');
+        
+        if (routeParams.language === "english") {
+            rootScope.setLanguage('en');
+        }
 
         // defining multiple language content
         scope.pageItems = {

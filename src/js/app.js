@@ -121,6 +121,10 @@ app.config(['$routeProvider',
             templateUrl: 'partials/about.html',
             controller: 'AboutController'
         }).
+        when('/about/:language', {
+            templateUrl: 'partials/about.html',
+            controller: 'AboutController'
+        }).
         when('/quotes', {
             templateUrl: 'partials/quotes.html',
             controller: 'QuotesController'
