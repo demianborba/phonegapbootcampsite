@@ -21,14 +21,6 @@ app.controller('RegistrationController', ['$scope', 'AppEventManager', '$rootSco
                 "enLabel": "Want the Bootcamp in your city?"
             },
             "bootcamps": [{
-                    "city": "João Pessoa - Paraíba - Brasil",
-                    "address": "UFPB | Cidade Universitária",
-                    "ptDates": "18 & 19 / Agosto / 2014",
-                    "enDates": "18 & 19 / August / 2014",
-                    "name": "PhoneGap<br>Bootcamp<br>João Pessoa",
-                    "url": "http://www.jornadaadobe.com"
-                },
-                {
                     "city": "Rio de Janeiro - RJ - Brasil",
                     "address": "NAVE - Faculdade Estácio de Sá",
                     "ptDates": "11 & 12 / Setembro / 2014",
