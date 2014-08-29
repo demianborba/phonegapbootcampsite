@@ -18,7 +18,9 @@
             <h2 ng-bind-html="bootcamp.name"></h2>
             <p ng-if="isPortuguese"><strong>{{bootcamp.ptDates}}</strong></p>
             <p ng-if="isEnglish"><strong>{{bootcamp.enDates}}</strong></p>
-            <p>{{bootcamp.address}}<br>{{bootcamp.city}}<p>
+            <p ng-bind-html="bootcamp.address"></p>
+            <p ng-bind-html="bootcamp.city"></p>
+            <p></p>
 
             <section class="buttons">
                 <button ng-if="isPortuguese" type="button" ng-click="gotoPage(bootcamp.url)">{{pageItems.registerButton.ptLabel}}</button>

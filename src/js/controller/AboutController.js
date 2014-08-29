@@ -13,8 +13,8 @@ app.controller('AboutController', ['$scope','$rootScope','AppEventManager','$rou
                 "enLabel": "About<br>PhoneGap<br>Bootcamp"
             },
             "nextCitiesMessage": {
-                "ptLabel": "Inscrições abertas para a próxima turma do PhoneGap Bootcamp no Rio de Janeiro:",
-                "enLabel": "Registration open for the next PhoneGap Bootcamp class in Rio de Janeiro:"
+                "ptLabel": "Inscrições abertas para as próximas turmas do PhoneGap Bootcamp em São Paulo e no Rio de Janeiro:",
+                "enLabel": "Registration open for the next PhoneGap Bootcamp classes in Sao Paulo and Rio de Janeiro:"
             },
             "button1": {
                 "ptLabel": "Inscreva-se já",
