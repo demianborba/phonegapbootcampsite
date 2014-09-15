@@ -21,27 +21,13 @@ app.controller('RegistrationController', ['$scope', 'AppEventManager', '$rootSco
                 "enLabel": "Want the Bootcamp in your city?"
             },
             "bootcamps": [{
-                "city": "Rio de Janeiro - RJ - Brasil",
-                "address": "Espaço NAVE - Estácio de Sá<br>Avenida Venezuela 43, 6˚ Andar, Centro",
-                "ptDates": "11 & 12 / Setembro / 2014",
-                "enDates": "11 & 12 / September / 2014",
-                "name": "PhoneGap<br>Bootcamp<br>Rio de Janeiro",
-                "url": "https://actioncreations.com/store/produto/phonegap-bootcamp-rio-de-janeiro-11-e-12-setembro-2014/"
-                }, {
                 "city": "São Paulo - SP - Brasil",
                 "address": "Espaço iMasters - Rua Claudio Soares, 72 conj 1302 - Próximo ao metrô Faria Lima",
                 "ptDates": "30/Setembro e 1/Outubro, 2014",
                 "enDates": "30/September & 1/October, 2014",
                 "name": "PhoneGap<br>Bootcamp<br>São Paulo",
                 "url": "https://actioncreations.com/store/produto/phonegap-bootcamp-sao-paulo-30-setembro-2014/"
-                }, {
-                "city": "San Francisco - California - USA",
-                "address": "HTML5 Dev Conf",
-                "ptDates": "Datas a definir",
-                "enDates": "To be defined",
-                "name": "PhoneGap<br>Bootcamp<br>San Francisco",
-                "url": "message:Registration for SF Bootcamp will open soon!"
-            }]
+                }]
         };
 
         scope.gotoContactPage = function () {
