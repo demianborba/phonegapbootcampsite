@@ -199,6 +199,11 @@ textarea {
 @keyframes exit {
     0% {opacity: 1;} 100% {opacity: 0;}
 }
+// color red for "SOLD OUT" message at registration page
+.red {
+    color: #cc2424;
+    font-size: 15px;
+}
 
 // angular animations
 ng-view {
