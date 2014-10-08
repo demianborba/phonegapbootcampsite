@@ -21,19 +21,19 @@ app.controller('RegistrationController', ['$scope', 'AppEventManager', '$rootSco
                 "enLabel": "Want the Bootcamp in your city?"
             },
             "bootcamps": [{
-                "city": "São Paulo - SP - Brasil",
-                "address": "Centro Empresarial Nações Unidas - CENU. Av das Nações Unidas, 12.901. 35º andar – Torre Norte - Brooklin Novo. CEP: 04578-000",
-                "ptDates": "27 e 28 / Setembro / 2014",
-                "enDates": "27 & 28 / September / 2014",
-                "name": "PhoneGap<br>Bootcamp<br>São Paulo FDS",
-                "url": "https://actioncreations.com/store/produto/phonegap-bootcamp-sao-paulo-27-28-setembro-turma-fds/"
-                },{
-                "city": "São Paulo - SP - Brasil",
-                "address": "Espaço iMasters - Rua Claudio Soares, 72 conj 1302 - Próximo ao metrô Faria Lima",
-                "ptDates": "30/Setembro e 1/Outubro, 2014",
-                "enDates": "30/September & 1/October, 2014",
-                "name": "PhoneGap<br>Bootcamp<br>São Paulo<br><span class='red'>vagas esgotadas</span>",
-                "url": "message:Vagas esgotadas para esta turma!"
+                "city": "Ribeirão Preto - SP - Brasil",
+                "address": "Supera Parque de Inovação e Tecnologia de Ribeirão Preto. Avenida Doutora Nadir Aguiar, 1805, Ribeirão Preto - SP",
+                "ptDates": "8 e 9 / Novembro / 2014",
+                "enDates": "8 & 9 / November / 2014",
+                "name": "PhoneGap<br>Bootcamp<br>Ribeirão Preto",
+                "url": "https://actioncreations.com/store/?p=2666"
+                }, {
+                "city": "Recife - PE - Brasil",
+                "address": "Portomídia: Rua do Apolo, 181, Bairro do Recife.",
+                "ptDates": "29 e 30 / Novembro / 2014",
+                "enDates": "29 & 30 / November / 2014",
+                "name": "PhoneGap<br>Bootcamp<br>Recife",
+                "url": "https://actioncreations.com/store/?p=2663"
                 }]
         };
 
