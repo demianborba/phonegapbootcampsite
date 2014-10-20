@@ -24,7 +24,7 @@ app.controller('AppController', ['$scope', '$rootScope',
                 rootScope.isEnglish = false;
             }
         };
-        rootScope.setLanguage('pt');
+        rootScope.setLanguage('en');
         
         // global method to show messages (native and browser)
         rootScope.showMessage = function (message) {
