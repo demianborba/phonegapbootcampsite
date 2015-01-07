@@ -20,20 +20,13 @@ app.controller('RegistrationController', ['$scope', 'AppEventManager', '$rootSco
                 "ptLabel": "Quer o Bootcamp em sua cidade?",
                 "enLabel": "Want the Bootcamp in your city?"
             },
-            "bootcamps": [{
-                "city": "Ribeirão Preto - SP - Brasil",
-                "address": "Supera Parque de Inovação e Tecnologia de Ribeirão Preto. Avenida Doutora Nadir Aguiar, 1805, Ribeirão Preto - SP",
-                "ptDates": "8 e 9 / Novembro / 2014",
-                "enDates": "8 & 9 / November / 2014",
-                "name": "PhoneGap<br>Bootcamp<br>Ribeirão Preto",
-                "url": "https://actioncreations.com/store/?p=2666"
-                }, {
-                "city": "Recife - PE - Brasil",
-                "address": "Portomídia: Rua do Apolo, 181, Bairro do Recife.",
-                "ptDates": "29 e 30 / Novembro / 2014",
-                "enDates": "29 & 30 / November / 2014",
-                "name": "PhoneGap<br>Bootcamp<br>Recife",
-                "url": "https://actioncreations.com/store/?p=2663"
+            "bootcamps": [{{
+                "city": "Natal - RN - Brasil",
+                "address": "Estácio:  Avenida Almirante Alexandrino de Alencar, 708 - Alecrim.",
+                "ptDates": "26 e 27 / Janeiro / 2014",
+                "enDates": "26 & 27 / January / 2014",
+                "name": "PhoneGap<br>Bootcamp<br>Natal",
+                "url": "http://jornadaadobe.com/inscricoes"
                 }]
         };
 
