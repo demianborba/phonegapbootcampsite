@@ -20,7 +20,7 @@ app.controller('RegistrationController', ['$scope', 'AppEventManager', '$rootSco
                 "ptLabel": "Quer o Bootcamp em sua cidade?",
                 "enLabel": "Want the Bootcamp in your city?"
             },
-            "bootcamps": [{{
+            "bootcamps": [{
                 "city": "Natal - RN - Brasil",
                 "address": "Estácio:  Avenida Almirante Alexandrino de Alencar, 708 - Alecrim.",
                 "ptDates": "26 e 27 / Janeiro / 2014",
